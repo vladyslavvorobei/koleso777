@@ -1,0 +1,251 @@
+.selection
+	padding: 20px 0
+	&__grid
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 20px
+		+r(1199)
+			grid-template-columns: 1fr
+	&__block
+		border: 1px solid $gallery
+	&-block
+		&__header
+			background-color: $mainColor
+			background-size: 140px 140px
+			background-repeat: no-repeat
+			background-position: 106.5% -15px
+			color: $mainTextColorWithThemesColor
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			align-items: center
+			position: relative
+			overflow: hidden
+			padding: 35px 9.6vw 35px 40px
+			+r(991)
+				padding: 25px 150px 25px 40px
+			+r(575)
+				flex-direction: column
+				align-items: flex-start
+				padding: 20px
+		&__title
+			+r(575)
+				margin-bottom: 5px
+			h2
+				margin: 0 0 1px
+				font-family: $titleFont
+				font-size: 19px
+				font-weight: 800
+			p
+				margin: 0
+				opacity: .8
+				font-size: 13px
+				line-height: 1em
+		&__tabs-nav
+			display: flex
+			flex-direction: column
+		&__button
+			padding: 1px 1px 1px 15px
+			border: none
+			background-color: transparent
+			position: relative
+			text-align: left
+			line-height: 1em
+			font-family: $globalDefaultFont
+			font-size: 16px
+			font-weight: 400
+			color: $mainTextColorWithThemesColor
+			cursor: pointer
+			letter-spacing: -.02em
+			transition: all .3s ease
+			&::before
+				content: ''
+				width: 5px
+				height: 5px
+				border-top: 2px solid $white
+				border-right: 2px solid $white
+				position: absolute
+				left: 0
+				top: 50%
+				transform: rotate(45deg) translateY(-50%)
+				opacity: 0
+				transition: all .3s ease
+			&:focus, &:active
+				outline: none
+			&--active
+				font-weight: 700
+				&::before
+					opacity: 1
+		&__main
+			padding: 30px 40px 20px
+			+r(767)
+				padding: 25px 30px 15px
+			+r(575)
+				padding: 20px 20px 15px
+			&:nth-of-type(n+3)
+				display: none
+
+
+.search-form
+	&__row
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-bottom: 30px
+		&:last-of-type
+			margin-bottom: 0
+		span
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 13px
+			color: $silverChalice
+			text-transform: uppercase
+			+r(575)
+				display: none
+		&--elems
+			display: grid
+			grid-template-columns: 120px 20px 120px 20px 120px
+			grid-gap: 10px
+			+r(575)
+				grid-template-columns: 1fr
+		&--checkboxes
+			display: grid
+			grid-template-columns: repeat(3, 140px)
+			grid-gap: 0 5px
+			+r(1439)
+				max-width: none
+			+r(575)
+				grid-template-columns: 1fr
+	&__elem
+		display: flex
+		flex-direction: column
+		position: relative
+		&::after
+			content: ''
+			width: 5px
+			height: 5px
+			border-bottom: 2px solid $silverChalice
+			border-left: 2px solid $silverChalice
+			position: absolute
+			left: 98px
+			top: 48%
+			transform: rotate(-45deg) translateY(-50%)
+			+r(575)
+				left: auto
+				right: 15px
+	&__title
+		position: absolute
+		max-width: 65px
+		max-height: 16px
+		overflow: hidden
+		left: 14px
+		z-index: 1
+		font-size: 16px
+		color: $silverChalice
+		line-height: 1em
+		transform: translateY(14px)
+		transition: all .2s ease
+		cursor: pointer
+		&--active
+			transform: translateY(5px) scale(.75) translateX(-5px)
+	&__result
+		width: 120px
+		height: 42px
+		border-radius: 6px
+		outline: none
+		border: none
+		background: $wildSand
+		cursor: pointer
+		position: relative
+		padding: 20px 33px 5px 15px
+		box-sizing: border-box
+		font-family: $globalDefaultFont
+		font-size: 16px
+		line-height: 1em
+		color: $mineShaft
+		+ls($globalLetterSpacing)
+		+r(575)
+			width: 100%
+	&__list
+		display: none
+		position: absolute
+		background-color: $wildSand
+		min-width: 120px
+		top: 100%
+		z-index: 100
+		overflow: auto
+		border-radius: 6px
+		+r(575)
+			width: 100%
+		a
+			display: block
+			transition: all .3s ease
+			padding: 4px 16px
+			color: $mineShaft
+			&:hover
+				background-color: rgba($silverChalice, .3)
+
+		&--visible
+			display: block
+	&__checkbox
+		position: relative
+		input
+			position: absolute
+			bottom: 0
+			opacity: 0
+		label
+			padding-left: 26px
+			font-family: $globalDefaultFont
+			font-size: 16px
+			color: $silverChalice
+			line-height: 1em
+			text-align: left
+			position: relative
+			cursor: pointer
+
+			&::before
+				content: ''
+				position: absolute
+				display: inline-block
+				width: 13px
+				height: 13px
+				border: 1px solid $silverChalice
+				background: transparent
+				left: 0
+				top: 2px
+				border-radius: 4px
+			&::after
+				content: 'х'
+				font-family: $globalDefaultFont
+				color: $white
+				font-size: 14px
+				line-height: 1em
+				position: absolute
+				left: 4.5px
+				top: 2px
+				opacity: 0
+				transition: all .3s ease
+		input[type="checkbox"]:checked ~ label
+			color: $elm
+		input[type="checkbox"]:checked ~ label::after
+			transition: all .3s ease
+			opacity: 1
+		input[type="checkbox"]:checked ~ label::before
+			transition: all .3s ease
+			border: 1px solid $elm
+			background-color: $elm
+
+	&__link
+		font-size: 13px
+		color: $elm
+		max-width: 230px
+		margin-bottom: 10px
+		line-height: 1em
+		text-decoration: underline
+		transition: all .3s ease
+		+r(767)
+			max-width: none
+			width: 100%
+		&:hover
+			text-decoration: none

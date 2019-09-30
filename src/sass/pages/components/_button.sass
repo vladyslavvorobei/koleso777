@@ -1,0 +1,40 @@
+.button
+	border: 1px solid $elm
+	background-color: transparent
+	border-radius: 6px
+	color: $elm
+	margin-right: 12px
+	cursor: pointer
+	text-transform: uppercase
+	font-size: 13px
+	font-family: $globalDefaultFont
+	line-height: 1em
+	padding: 16px 19px
+	text-align: center
+	min-width: 120px
+	+ls($globalLetterSpacing)
+	transition: all .3s ease
+	outline: none
+	margin-bottom: 10px
+	+r(575)
+		margin-right: 8px
+		max-width: 120px
+	//min-width: auto
+	&:last-of-type
+		margin-right: 30px
+		+r(575)
+			margin-right: 0
+	&:hover
+		background-color: $elm
+		color: $white
+		transform: translateY(-1px)
+		box-shadow: 0 3px 5px 0 rgba($elm, .3)
+	&:active
+		transform: translateY(1px)
+		box-shadow: 0 3px 3px 0 rgba($elm, .4)
+	&--send
+		background-color: $elm
+		color: $white
+		&:hover
+			background-color: transparent
+			color: $elm

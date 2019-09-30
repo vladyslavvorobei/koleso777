@@ -1,0 +1,408 @@
+.header
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	background-color: $headerBackgrounColor
+	transition: all .3s ease
+	z-index: 1000
+	border: none
+	+r(991)
+		&::before
+			content: ''
+			width: calc( 100% - 30px)
+			height: 1px
+			left: 15px
+			top: 54px
+			position: absolute
+			background-color: $headerBorderColor
+		.container
+			position: initial
+			max-width: none
+			box-sizing: border-box
+
+
+	&--scroll
+		box-shadow: 0 1px 15px 0 rgba($elm, .3)
+
+	&__top-line
+		display: flex
+		align-items: center
+		padding: 6px 0
+		z-index: 2000
+		+r(1199)
+			flex-wrap: wrap
+			justify-content: space-between
+			padding: 6px 0 0
+		+r(991)
+			flex-direction: column
+			position: absolute
+			background-color: $white
+			width: 100%
+			max-width: 320px
+			height: 100vh
+			overflow: auto
+			z-index: 1000
+			top: 0
+			left: -320px
+			padding: 0
+			justify-content: flex-start
+			flex-wrap: nowrap
+			align-items: flex-start
+			box-sizing: border-box
+			transition: all .5s ease
+
+
+		&--active
+			+r(991)
+				left: 0
+	&__description
+		display: block
+		color: $gray
+		margin:  0 4.7vw 0 20px
+		&--top
+			+r(991)
+				padding: 10px 55px 10px 15px
+				box-sizing: border-box
+				margin: 0
+				order: 1
+				width: 100%
+				border-top: 1px solid $headerBorderColor
+				span
+					display: none
+		&--middle
+			max-height: 48px
+			overflow: hidden
+			+r(767)
+				display: none
+	&__tel-number
+		display: flex
+		flex-wrap: wrap
+		margin-right: 3.1vw
+		+r(1439)
+			flex-direction: column
+		+r(1199)
+			flex-direction: row
+			padding: 10px 0
+		+r(991)
+			order: 4
+			flex-direction: column
+			border-bottom: 1px solid $headerBorderColor
+			width: 100%
+			margin-right: 0
+			padding: 10px 55px 10px 15px
+			box-sizing: border-box
+		a
+			display: block
+			font-weight: 700
+			color: $mineShaft
+			flex-shrink: 0
+			margin-right: 20px
+			transition: all .3s ease
+			+r(991)
+				margin-right: 0
+				margin-bottom: 5px
+			&:last-of-type
+				margin-right: 0
+				+r(991)
+					margin-bottom: 0
+			&:hover, &:focus
+				color: $elm
+	&__menu
+		margin-left: auto
+		margin-right: 0
+		display: flex
+		+r(1199)
+			width: 100%
+			border-top: 1px solid $headerBorderColor
+			justify-content: flex-end
+		+r(991)
+			order: 2
+			flex-direction: column
+			border-bottom: 1px solid $headerBorderColor
+		li
+			margin-right: 10px
+			+r(991)
+				margin-right: 0
+		a
+			color: $gray
+			padding: 5px 10px 5px 12px
+			position: relative
+			display: flex
+			align-items: center
+			transition: all .3s ease
+			+r(1199)
+				padding: 8px 13px 8px 15px
+			+r(991)
+				padding: 8px 55px 8px 15px
+			.icon
+				width: 16px
+				height: 16px
+				padding-right: 12px
+				fill: $gray
+				transition: all .3s ease
+			&:hover, &:focus
+				color: $elm
+				.icon
+					fill: $elm
+					transform: scale(1.2)
+
+	&__middle-line
+		display: flex
+		align-items: center
+		border-top: 1px solid $headerBorderColor
+		border-bottom: 1px solid $headerBorderColor
+		position: relative
+		+r(991)
+			border: none
+
+		.header__description
+			margin-left: 1.6vw
+
+	&__logo
+		font-family: $logoFont
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 19px
+		color: $logoColor
+		padding: 28px 24px
+		display: block
+		min-height: 100%
+		border-right: 1px solid $headerBorderColor
+		+r(1199)
+			padding: 15px 24px
+		+r(991)
+			padding: 15px 24px 15px 14px
+			margin-left: 10px
+		+r(767)
+			border-right: none
+	&__nav
+		display: flex
+		align-items: center
+		margin-left: auto
+		margin-right: 2.61vw
+		a, li
+			display: block
+			flex-shrink: 0
+		li
+			&:nth-of-type(n+5)
+				display: none
+			&:last-of-type
+				display: block
+				+r(991)
+					display: none
+			+r(1199)
+				display: none
+		a
+			padding: 10px 5px
+			margin: 0 8px
+			color: $navTextColor
+			font-weight: 700
+			transition: all .3s ease
+			&:hover, &:focus
+				color: $navTextColorHover
+
+	&__dropdown
+		position: relative
+
+	&__drop-btn
+		font-family: $globalDefaultFont
+		font-size: 16px
+		background-color: transparent
+		font-weight: 700
+		border: none
+		cursor: pointer
+		color: $navTextColor
+		position: relative
+		+ls($globalLetterSpacing)
+		padding: 5px 15px 15px 15px
+		&:hover, &:active
+			outline: none
+		&:focus
+			outline-color: $elm
+	&__drop-menu
+		display: none
+		position: absolute
+		background-color: $globalBackgroundColor
+		min-width: 170px
+		top: calc( 100% + 10px )
+		right: 0
+		text-align: right
+		border: 1px solid $headerBorderColor
+		li
+			&:nth-of-type(-n+4)
+				display: none
+			&:nth-of-type(n+5)
+				display: block
+			+r(1199)
+				display: block
+				&:nth-of-type(n)
+					display: block
+		a
+			margin: 0
+			padding: 5px 15px
+			&:hover
+				background: $headerBorderColor
+	&__cart
+		display: flex
+		padding: 25px 26px
+		border-left: 1px solid $headerBorderColor
+		+r(1199)
+			padding: 12px 26px
+		+r(767)
+			border-left: none
+		.icon
+			flex-shrink: 0
+			box-sizing: content-box
+			width: 28px
+			height: 30px
+			fill: $elm
+			transition: all .3s ease
+		&-num
+			position: absolute
+			right: 20px
+			top: 11px
+			font-weight: 700
+			color: $elm
+			transition: all .3s ease
+			+r(1199)
+				top: 4px
+				right: 16px
+		&:hover, &:focus
+			.icon
+				fill: $mineShaft
+			.header__cart-num
+				color: #ff3333
+	&__mobile
+		&-header
+			display: none
+			+r(991)
+				display: flex
+				align-items: center
+				justify-content: space-between
+				width: 100%
+				padding-right: 15px
+				box-sizing: border-box
+		&-btn
+			width: 30px
+			height: 30px
+			background-color: transparent
+			display: none
+			flex-shrink: 0
+			+r(991)
+				display: flex
+				justify-content: center
+				align-items: center
+			&--hidden
+				position: fixed
+				transition: all .5s ease
+				left: -45px
+			&--visible
+				left: 275px
+				z-index: 1200
+			&--active
+				.header__mobile-bar
+					background-color: transparent
+					&::before
+						transform: rotate(45deg)
+					&::after
+						transform: rotate(-45deg)
+
+		&-bar
+			width: 30px
+			height: 3px
+			background-color: $redOrange
+			position: relative
+			transition: all .3s ease
+			&::after,
+			&::before
+				content: ''
+				width: 30px
+				height: 3px
+				background-color: $redOrange
+				position: absolute
+				transition: all .3s ease
+			&::after
+				transform: translateY(-8px)
+			&::before
+				transform: translateY(8px)
+		&-nav
+			display: none
+			border-bottom: 1px solid $headerBorderColor
+			order: 3
+			width: 100%
+			+r(991)
+				display: flex
+				flex-direction: column
+			a, li
+				flex-shrink: 0
+			a
+				color: $navTextColorHover
+				padding: 8px 55px 8px 15px
+				position: relative
+				display: flex
+				align-items: center
+				transition: all .3s ease
+				&:hover, &:focus
+					color: $navTextColor
+		&-logo
+			display: none
+			+r(991)
+				font-family: $logoFont
+				font-weight: 700
+				text-transform: uppercase
+				font-size: 19px
+				color: $logoColor
+				padding: 15px 24px 15px 15px
+				display: block
+	&__shadow
+		position: fixed
+		left: 0
+		top: 0
+		background-color: rgba(0,0,0,.7)
+		opacity: 0
+		z-index: 800
+		width: 100vw
+		height: 100%
+		transform: translateX(-100%)
+		transition: opacity .5s ease-in-out
+		overflow: auto
+		&--active
+			+r(991)
+				opacity: 1
+				transform: translateX(0)
+				transition: opacity .5s ease-in-out
+.callback-btn
+	font-family: $globalDefaultFont
+	font-size: 16px
+	background-color: transparent
+	border: none
+	cursor: pointer
+	color: $elm
+	position: relative
+	padding: 0
+	transition: all .3s ease
+	flex-shrink: 0
+	+ls($globalLetterSpacing)
+	+r(991)
+		order: 5
+		padding: 10px 15px
+		margin-bottom: 15px
+	&::before
+		content: ''
+		width: 100%
+		height: 1px
+		background-color: $elm
+		position: absolute
+		bottom: 0
+		left: 0
+		transition: all .3s ease
+		+r(991)
+			content: none
+	&:hover, &:focus
+		color: $gray
+		&:before
+			left: 50%
+			width: 0
+
+

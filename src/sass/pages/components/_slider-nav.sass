@@ -1,0 +1,32 @@
+.slider-nav
+	margin-left: auto
+	margin-right: 15px
+	display: flex
+	+r(767)
+		margin-right: 0
+		margin-bottom: 10px
+	.slider-nav-next,
+	.slider-nav-prev
+		position: relative
+		margin-top: 0
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 30px
+		height: 30px
+		outline: none
+		&::after
+			content: ''
+			width: 15px
+			height: 15px
+		+r(575)
+			bottom: 50px
+	.swiper-button-next
+		&::after
+			background: url('../img/right-arrow-elm.svg') center no-repeat
+			background-size: contain
+	.swiper-button-prev
+		&::after
+			background: url('../img/left-arrow-elm.svg') center no-repeat
+			background-size: contain

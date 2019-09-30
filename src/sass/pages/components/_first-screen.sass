@@ -1,0 +1,112 @@
+.first-screen
+	margin-top: 128px
+	padding-top: 20px
+	+r(1439)
+		padding-top: 35px
+	+r(1199)
+		padding-top: 45px
+	+r(991)
+		margin-top: 54px
+		padding-top: 20px
+	&__swiper
+		background-image: linear-gradient( to top, rgb(72,114,133) 0%, rgb(65,65,65) 100%)!important
+	.swiper-slide
+		background-image: linear-gradient( to top, rgb(72,114,133) 0%, rgb(65,65,65) 100%)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	&__slide
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding: 240px 7.82vw 137px
+		+r(1199)
+			padding: 200px 7.50vw 100px
+		+r(767)
+			padding: 120px 2.5vw 70px
+		+r(575)
+			padding: 80px 15px 40px
+		h2, h3
+			color: $white
+			margin: 0
+		h3
+			width: 100%
+			font-size: 16px
+			font-weight: 400
+			margin-bottom: 15px
+			+r(575)
+				font-size: 15px
+				margin-bottom: 25px
+		h2
+			font-family: $titleFont
+			font-weight: 800
+			font-size: 35px
+			line-height: 1.2em
+			flex-shrink: 0
+			max-width: 50%
+			margin-right: 50px
+			+r(1199)
+				max-width: 75%
+			+r(991)
+				max-width: 65%
+				font-size: 32px
+				margin-right: 30px
+			+r(767)
+				max-width: none
+				width: 100%
+				margin-right: 0
+				margin-bottom: 20px
+				font-size: 28px
+			+r(575)
+				font-size: 24px
+				margin-bottom: 40px
+		button
+			flex-shrink: 0
+			font-family: $globalDefaultFont
+			font-size: $firstScreenButtonFontSize
+			text-transform: uppercase
+			line-height: 1em
+			padding: 15px 31px
+			color: $firstScreenButtonTextColor
+			background-color: $firstScreenButtonBackgroundColor
+			border: none
+			border-radius: $firstScreenButtonBorderRadius
+			transition: all .3s ease
+			cursor: pointer
+			outline: none
+			&:hover, &:focus
+				box-shadow: 0 3px 10px 0 rgba(0,0,0,.6)
+				transform: translateY(-1px)
+			&:active
+				transform: translateY(1px)
+				box-shadow: 0 3px 4px 0 rgba(0,0,0,.6)
+
+	.swiper-pagination-progressbar
+		background: $white
+	.swiper-pagination-progressbar-fill
+		background: $elm!important
+		height: 4px
+
+	.swiper-button-next,
+	.swiper-button-prev
+		top: auto
+		bottom: 30px
+		width: 30px
+		height: 30px
+		&::after
+			content: ''
+			width: 15px
+			height: 15px
+		+r(575)
+			bottom: 50px
+	.swiper-button-next
+		right: 25px
+		&::after
+			background: url('../img/right-arrow.svg') center no-repeat
+			background-size: contain
+	.swiper-button-prev
+		left: auto
+		right: 60px
+		&::after
+			background: url('../img/left-arrow.svg') center no-repeat
+			background-size: contain

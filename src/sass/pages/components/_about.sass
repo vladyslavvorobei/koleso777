@@ -1,0 +1,90 @@
+.about
+	padding: 70px 0 120px
+	+r(991)
+		padding: 50px 0
+	+r(575)
+		padding: 40px 0
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		padding: 0 310px
+		+r(1919)
+			padding: 0 150px
+		+r(1619)
+			padding: 0 50px
+		+r(1439)
+			padding: 0
+		+r(991)
+			flex-direction: column
+	&__title
+		width: 50%
+		max-width: 465px
+		margin-right: 110px
+		position: relative
+		+r(1199)
+			margin-right: 70px
+		+r(991)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 30px
+			max-width: none
+		&::before, &::after
+			content: ''
+			width: 20px
+			height: 20px
+			position: absolute
+			background: url('../img/about-icon.svg') center no-repeat
+			background-size: contain
+		&::before
+			bottom: 0
+			left: 0
+		&::after
+			bottom: 0
+			right: 0
+		h2
+			font-family: $titleFont
+			padding: 90px 105px 50px 70px
+			font-size: 25px
+			color: $elm
+			line-height: 1.3em
+			margin: 0
+			position: relative
+			+r(1199)
+				padding: 90px 50px 50px
+			+r(991)
+				padding: 50px
+				br
+					display: none
+			+r(767)
+				padding: 40px
+				font-size: 22px
+			+r(575)
+				padding: 35px
+				font-size: 20px
+			&::before, &::after
+				content: ''
+				width: 20px
+				height: 20px
+				position: absolute
+				background: url('../img/about-icon.svg') center no-repeat
+				background-size: contain
+			&::before
+				top: 0
+				left: 0
+			&::after
+				top: 0
+				right: 0
+	&__text
+		width: 50%
+		column-count: 2
+		column-gap: 50px
+		+r(1199)
+			column-count: 1
+		+r(991)
+			width: 100%
+		p
+			color: $mineShaft
+			margin-top: 0
+			margin-bottom: 25px
+			+r(1199)
+				margin-bottom: 15px

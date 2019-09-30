@@ -1,0 +1,97 @@
+.contacts
+	padding: 0 0 70px
+	+r(991)
+		padding: 0 0 40px
+	+r(575)
+		padding: 0 0 30px
+	#map
+		width: 100%
+		height: 500px
+		+r(767)
+			height: 400px
+		+r(575)
+			height: 300px
+	&__slider
+		padding: 0 310px
+		position: relative
+		+r(1919)
+			padding: 0 150px
+		+r(1619)
+			padding: 0 50px
+		+r(1439)
+			padding: 0
+		.slider-nav
+			margin-right: 0
+			position: absolute
+			right: 200px
+			bottom: 35px
+			+r(1619)
+				bottom: auto
+				top: -30px
+				right: 20px
+			+r(767)
+				right: 0
+		.swiper-container
+			min-height: 175px
+			margin-top: -90px
+			+r(1619)
+				margin-top: 40px
+
+
+	&__slide
+		background-color: $white
+		border-radius: 4px
+		padding: 30px 50px 30px 20px
+		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1)
+		margin: 5px 5px 10px
+	&__icons
+		position: absolute
+		right: 20px
+		top: 25px
+		display: flex
+		flex-direction: column
+		.icon
+			font-size: 22px
+			fill: $elm
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+	&__name
+		margin: 0 0 15px
+		font-family: $titleFont
+		font-weight: 600
+		color: $elm
+		line-height: 1.400em
+	&__text
+		margin: 0 0 10px
+		color: $silverChalice
+		+r(1439)
+			br
+				display: none
+	&__info
+		margin: 0 0 15px
+		a, span
+			display: inline-block
+			color: $mineShaft
+			font-weight: 700
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+		a
+			transition: all .3s ease
+			&:hover
+				color: $elm
+	&__on-map
+		display: inline-block
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid $elm
+		color: $elm
+		cursor: pointer
+		font-family: $globalDefaultFont
+		font-size: 16px
+		transition: all .3s ease
+		padding: 0
+		outline: none
+		&:hover
+			border-bottom: 1px solid transparent

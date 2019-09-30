@@ -1,0 +1,60 @@
+body
+	font-family: $globalDefaultFont
+	font-weight: 400
+	font-style: normal
+	font-size: $globalFontSize
+	background-color: $globalBackgroundColor
+	line-height: 1.5em
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	margin: 0
+	padding: 0
+	+ls($globalLetterSpacing)
+
+
+html
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	-ms-overflow-style: scrollbar
+
+*
+	//box-sizing: border-box
+	&::after,
+	&::before
+		-webkit-box-sizing: inherit
+		box-sizing: inherit
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+a
+	text-decoration: none
+
+section
+	position: relative
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	position: relative
+	box-sizing: border-box
+	+rmin(576)
+		max-width: 540px
+	+rmin(768)
+		max-width: 720px
+	+rmin(992)
+		max-width: 960px
+	+rmin(1200)
+		max-width: 1170px
+	+rmin(1440)
+		max-width: 1390px
+	+rmin(1620)
+		max-width: 1590px
+	+rmin(1920)
+		max-width: 1840px
