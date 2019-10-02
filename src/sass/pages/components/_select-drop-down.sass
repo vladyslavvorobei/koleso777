@@ -1,0 +1,105 @@
+.select-drop-down
+	margin-left: auto
+	margin-right: 100px
+	position: relative
+	display: flex
+	flex-direction: column
+	+r(991)
+		align-items: flex-end
+	+r(767)
+		width: 100%
+		margin-right: 0
+		margin-left: auto
+		margin-bottom: 10px
+	+ .slider-nav
+		margin-left: 0
+	&__input
+		width: 100%
+		max-width: 250px
+		min-height: 24px
+		box-sizing: border-box
+		display: inline-block
+		text-align: right
+		font-weight: 700
+		padding-right: 15px
+		position: relative
+		color: $mineShaft
+		cursor: pointer
+		word-wrap: normal
+		+r(575)
+			max-width: none
+		&::before
+			content: ''
+			width: 5px
+			height: 5px
+			position: absolute
+			right: 0
+			top: 48%
+			border-bottom: 2px solid $mineShaft
+			border-left: 2px solid $mineShaft
+			transform: rotate(-45deg) translateY(-50%)
+	&__list
+		display: none
+		position: absolute
+		z-index: 100
+		right: 0
+		top: 110%
+		width: 150px
+		padding: 10px 10px 15px
+		text-align: right
+		background-color: $white
+		border: 1px solid $gallery
+		li
+			display: block
+			margin-bottom: 4px
+		button
+			display: block
+			margin: 0 auto 4px
+			border: none
+			padding: 4px
+			font-family: $globalDefaultFont
+			font-weight: 400
+			font-size: 16px
+			background-color: transparent
+			cursor: pointer
+			line-height: 1em
+			outline: none
+			transition: all .3s ease
+			&:last-of-type
+				margin-bottom: 0
+			&:hover
+				color: $redOrange
+		&--visible
+			display: block
+		a
+			display: block
+			line-height: 1em
+			padding: 4px
+			color: $mineShaft
+			transition: all .3s ease
+			&:hover
+				background-color: $gallery
+			&.active
+				background-color: rgba($silverChalice, .4)
+				font-weight: 700
+	&__title
+		text-align: left
+		line-height: 1em
+		font-size: 13px
+		color: $silverChalice
+	&#size
+		margin-right: 30px
+		+r(991)
+			margin-right: 20px
+		.select-drop-down__input
+			text-align: left
+			width: 35px
+		.select-drop-down__list
+			width: auto
+			text-align: left
+			+r(991)
+				top: 40px
+				left: 0
+				right: auto
+		+r(991)
+			flex-shrink: 0

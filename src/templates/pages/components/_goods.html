@@ -18,9 +18,8 @@
       <a href="#" class="watch-all">
         Перейти ко всем
       </a>
-      <form class="select-drop-down">
+      <div class="select-drop-down" id="tags">
         <span class="select-drop-down__input">Акция, Хит</span>
-        <span class='measure'></span>
         <div class="select-drop-down__list">
           <ul>
             <li>
@@ -58,7 +57,7 @@
             Очистить
           </button>
         </div>
-      </form>
+      </div>
       <div class="slider-nav">
         <div class="slider-nav-prev goods__swiper-button-prev swiper-button-prev"></div>
         <div class="slider-nav-next goods__swiper-button-next swiper-button-next"></div>
@@ -79,22 +78,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -102,14 +114,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -118,9 +134,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -140,22 +156,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -163,14 +192,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -179,9 +212,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -201,22 +234,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -224,14 +270,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -240,9 +290,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -262,22 +312,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -285,14 +348,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -301,9 +368,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -323,22 +390,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -346,14 +426,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -362,9 +446,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -384,22 +468,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -407,14 +504,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -423,9 +524,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -445,22 +546,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -468,14 +582,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -484,9 +602,9 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -506,22 +624,35 @@
                 <span class="product-card__tag product-card__tag--new">
                   Новинка
                 </span>
-              </div>
-              <div class="product-card__icons">
-                <span class="product-card__icon product-card__icon--heart">
-                  {{mixins.icon('heart')}}
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
                 </span>
-                <span class="product-card__icon product-card__icon--comparing">
-                  {{mixins.icon('comparing')}}
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
                 </span>
-                <span class="product-card__icon product-card__icon--studded">
-                  {{mixins.icon('studded')}}
-                </span>
-                <span class="product-card__icon product-card__icon--snowflake">
-                  {{mixins.icon('snowflake')}}
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
                 </span>
               </div>
               <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
                 <img src="img/product-img.png" alt="">
               </div>
               <div class="product-card__info">
@@ -529,14 +660,18 @@
                   Арт: 564902
                 </div>
                 <div class="product-card__rating">
-
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
                 </div>
               </div>
               <div class="product-card__name">
                 Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
               </div>
               <div class="product-card__price-wrapper">
-                <div class="product-card__price product-card__price--new">
+                <div class="product-card__price">
                   4 900 ₽ / шт.
                 </div>
                 <div class="product-card__price product-card__price--old">
@@ -545,9 +680,165 @@
               </div>
               <div class="product-card__buttons">
                 <div class="product-card__num-block">
-                  <span class="product-card__minus"></span>
+                  <button class="product-card__minus">-</button>
                   <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                  <span class="product-card__plus"></span>
+                  <button class="product-card__plus">+</button>
+                </div>
+                <button class="product-card__to-cart button button--send">
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="goods__card product-card">
+              <div class="product-card__tags">
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
+                </span>
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
+                </span>
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
+                </span>
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
+                </span>
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
+                </span>
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
+                </span>
+              </div>
+              <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
+                <img src="img/product-img.png" alt="">
+              </div>
+              <div class="product-card__info">
+                <div class="product-card__vendor-code">
+                  Арт: 564902
+                </div>
+                <div class="product-card__rating">
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
+                </div>
+              </div>
+              <div class="product-card__name">
+                Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
+              </div>
+              <div class="product-card__price-wrapper">
+                <div class="product-card__price">
+                  4 900 ₽ / шт.
+                </div>
+                <div class="product-card__price product-card__price--old">
+                  5 450 ₽ / шт.
+                </div>
+              </div>
+              <div class="product-card__buttons">
+                <div class="product-card__num-block">
+                  <button class="product-card__minus">-</button>
+                  <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
+                  <button class="product-card__plus">+</button>
+                </div>
+                <button class="product-card__to-cart button button--send">
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="goods__card product-card">
+              <div class="product-card__tags">
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
+                </span>
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
+                </span>
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
+                </span>
+                <span class="product-card__tag product-card__tag--hit">
+                  Хит
+                </span>
+                <span class="product-card__tag product-card__tag--new">
+                  Новинка
+                </span>
+                <span class="product-card__tag product-card__tag--action">
+                  Акция
+                </span>
+              </div>
+              <div class="product-card__image">
+                <div class="product-card__icons-wrapper">
+                  <div class="product-card__icons product-card__icons--top">
+                    <a href="#" class="product-card__icon product-card__icon--heart">
+                      {{mixins.icon('heart')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--comparing">
+                      {{mixins.icon('comparing')}}
+                    </a>
+                  </div>
+                  <div class="product-card__icons product-card__icons--bottom">
+                    <a href="#" class="product-card__icon product-card__icon--studded">
+                      {{mixins.icon('studded')}}
+                    </a>
+                    <a href="#" class="product-card__icon product-card__icon--snowflake">
+                      {{mixins.icon('snowflake')}}
+                    </a>
+                  </div>
+                </div>
+                <img src="img/product-img.png" alt="">
+              </div>
+              <div class="product-card__info">
+                <div class="product-card__vendor-code">
+                  Арт: 564902
+                </div>
+                <div class="product-card__rating">
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star product-card__star--checked"></span>
+                  <span class="product-card__star"></span>
+                  <span class="product-card__star"></span>
+                </div>
+              </div>
+              <div class="product-card__name">
+                Шина Continental ContiIce Contact 2 KD 185/70 R14 92T
+              </div>
+              <div class="product-card__price-wrapper">
+                <div class="product-card__price">
+                  4 900 ₽ / шт.
+                </div>
+                <div class="product-card__price product-card__price--old">
+                  5 450 ₽ / шт.
+                </div>
+              </div>
+              <div class="product-card__buttons">
+                <div class="product-card__num-block">
+                  <button class="product-card__minus">-</button>
+                  <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
+                  <button class="product-card__plus">+</button>
                 </div>
                 <button class="product-card__to-cart button button--send">
                   В корзину
@@ -556,9 +847,6 @@
             </div>
           </div>
         </div>
-        <!-- Add Pagination -->
-        <!-- Add Arrows -->
-
       </div>
     </div>
   </div>

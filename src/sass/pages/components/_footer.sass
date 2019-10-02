@@ -1,4 +1,5 @@
 .footer
+	position: relative
 	&__wrapper
 		background-color: $elm
 		padding: 60px 445px
@@ -127,8 +128,50 @@
 			text-align: center
 		form
 			margin-bottom: 65px
+			position: relative
 			+r(575)
 				margin-bottom: 30px
+			input
+				font-family: $globalDefaultFont
+				font-size: 16px
+				font-weight: 400
+				color: $silverChalice
+				border-radius: 6px
+				background-color: $white
+				line-height: 1em
+				border: none
+				outline: none
+				padding: 12px 50px 12px 13px
+				box-sizing: border-box
+				width: 100%
+				max-width: 290px
+			button
+				position: absolute
+				width: 36px
+				height: 36px
+				background-color: $elm
+				top: 4px
+				left: 250px
+				border: none
+				border-radius: 4px
+				transition: all .3s ease
+				+r(575)
+					left: auto
+					right: 4px
+				&::before
+					content: ''
+					width: 5px
+					height: 5px
+					border-bottom: 2px solid $white
+					border-left: 2px solid $white
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%) rotate(-135deg)
+					transition: all .3s ease
+				&:hover
+					&::before
+						transform: translate(-50%, -50%) rotate(-135deg) scale(1.2)
 			p
 				font-size: 13px
 				color: rgba($white, .6)
@@ -136,6 +179,10 @@
 				+r(1199)
 					br
 						display: none
+	&__form
+		+r(575)
+			display: inline-block
+			position: relative
 	&__tel-nums
 		a
 			font-weight: 700

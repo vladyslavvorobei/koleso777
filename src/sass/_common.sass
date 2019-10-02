@@ -8,10 +8,11 @@ body
 	overflow-x: hidden
 	position: relative
 	min-width: 320px
-	margin: 0
 	padding: 0
 	+ls($globalLetterSpacing)
-
+	margin: 128px 0 0 0
+	+r(991)
+		margin: 54px 0 0 0
 
 html
 	-webkit-box-sizing: border-box
@@ -36,6 +37,10 @@ a
 section
 	position: relative
 
+button
+	outline: none
+	cursor: pointer
+
 .container
 	width: 100%
 	padding-right: 15px
@@ -56,5 +61,6 @@ section
 		max-width: 1390px
 	+rmin(1620)
 		max-width: 1590px
+		padding: 0
 	+rmin(1920)
 		max-width: 1840px

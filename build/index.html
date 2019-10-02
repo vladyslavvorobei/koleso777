@@ -87,11 +87,11 @@
             <div class="header__mobile-bar">
             </div>
           </div>
-          <a href="#" class="header__logo"> Koleso777 </a>
+          <a href="index.html" class="header__logo"> Koleso777 </a>
           <a href="#" class="header__description header__description--middle"> Доставляем по Москве и области. <br> Отправляем ТК по всей России. </a>
           <ul class="header__nav">
             <li>
-              <a href="#"> Автошины </a>
+              <a href="categories-products.html"> Автошины </a>
             </li>
             <li>
               <a href="#"> Колесные диски </a>
@@ -824,9 +824,8 @@
               <a href="#"> Популярные товары </a>
             </h2>
             <a href="#" class="watch-all"> Перейти ко всем </a>
-            <form class="select-drop-down">
+            <div class="select-drop-down" id="tags">
               <span class="select-drop-down__input">Акция, Хит</span>
-              <span class='measure'></span>
               <div class="select-drop-down__list">
                 <ul>
                   <li>
@@ -860,7 +859,7 @@
                 <button class="select-drop-down__close-btn"> Закрыть </button>
                 <button class="select-drop-down__reset-btn"> Очистить </button>
               </div>
-            </form>
+            </div>
             <div class="slider-nav">
               <div class="slider-nav-prev goods__swiper-button-prev swiper-button-prev"></div>
               <div class="slider-nav-next goods__swiper-button-next swiper-button-next"></div>
@@ -875,47 +874,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -927,47 +938,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -979,47 +1002,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -1031,47 +1066,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -1083,47 +1130,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -1135,47 +1194,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -1187,47 +1258,59 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
@@ -1239,55 +1322,193 @@
                       <span class="product-card__tag product-card__tag--action"> Акция </span>
                       <span class="product-card__tag product-card__tag--hit"> Хит </span>
                       <span class="product-card__tag product-card__tag--new"> Новинка </span>
-                    </div>
-                    <div class="product-card__icons">
-                      <span class="product-card__icon product-card__icon--heart">
-                        <svg class="icon icon-heart">
-                          <use xlink:href="img/sprite.svg#icon-heart"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--comparing">
-                        <svg class="icon icon-comparing">
-                          <use xlink:href="img/sprite.svg#icon-comparing"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--studded">
-                        <svg class="icon icon-studded">
-                          <use xlink:href="img/sprite.svg#icon-studded"></use>
-                        </svg>
-                      </span>
-                      <span class="product-card__icon product-card__icon--snowflake">
-                        <svg class="icon icon-snowflake">
-                          <use xlink:href="img/sprite.svg#icon-snowflake"></use>
-                        </svg>
-                      </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
                     </div>
                     <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                       <img src="img/product-img.png" alt="">
                     </div>
                     <div class="product-card__info">
                       <div class="product-card__vendor-code"> Арт: 564902 </div>
                       <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
                       </div>
                     </div>
                     <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
                     <div class="product-card__price-wrapper">
-                      <div class="product-card__price product-card__price--new"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
                       <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
                     </div>
                     <div class="product-card__buttons">
                       <div class="product-card__num-block">
-                        <span class="product-card__minus"></span>
+                        <button class="product-card__minus">-</button>
                         <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
-                        <span class="product-card__plus"></span>
+                        <button class="product-card__plus">+</button>
+                      </div>
+                      <button class="product-card__to-cart button button--send"> В корзину </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="goods__card product-card">
+                    <div class="product-card__tags">
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
+                    </div>
+                    <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <img src="img/product-img.png" alt="">
+                    </div>
+                    <div class="product-card__info">
+                      <div class="product-card__vendor-code"> Арт: 564902 </div>
+                      <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
+                      </div>
+                    </div>
+                    <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
+                    <div class="product-card__price-wrapper">
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
+                    </div>
+                    <div class="product-card__buttons">
+                      <div class="product-card__num-block">
+                        <button class="product-card__minus">-</button>
+                        <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
+                        <button class="product-card__plus">+</button>
+                      </div>
+                      <button class="product-card__to-cart button button--send"> В корзину </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="goods__card product-card">
+                    <div class="product-card__tags">
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--hit"> Хит </span>
+                      <span class="product-card__tag product-card__tag--new"> Новинка </span>
+                      <span class="product-card__tag product-card__tag--action"> Акция </span>
+                    </div>
+                    <div class="product-card__image">
+                      <div class="product-card__icons-wrapper">
+                        <div class="product-card__icons product-card__icons--top">
+                          <a href="#" class="product-card__icon product-card__icon--heart">
+                            <svg class="icon icon-heart">
+                              <use xlink:href="img/sprite.svg#icon-heart"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--comparing">
+                            <svg class="icon icon-comparing">
+                              <use xlink:href="img/sprite.svg#icon-comparing"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="product-card__icons product-card__icons--bottom">
+                          <a href="#" class="product-card__icon product-card__icon--studded">
+                            <svg class="icon icon-studded">
+                              <use xlink:href="img/sprite.svg#icon-studded"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="product-card__icon product-card__icon--snowflake">
+                            <svg class="icon icon-snowflake">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <img src="img/product-img.png" alt="">
+                    </div>
+                    <div class="product-card__info">
+                      <div class="product-card__vendor-code"> Арт: 564902 </div>
+                      <div class="product-card__rating">
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star product-card__star--checked"></span>
+                        <span class="product-card__star"></span>
+                        <span class="product-card__star"></span>
+                      </div>
+                    </div>
+                    <div class="product-card__name"> Шина Continental ContiIce Contact 2 KD 185/70 R14 92T </div>
+                    <div class="product-card__price-wrapper">
+                      <div class="product-card__price"> 4 900 ₽ / шт. </div>
+                      <div class="product-card__price product-card__price--old"> 5 450 ₽ / шт. </div>
+                    </div>
+                    <div class="product-card__buttons">
+                      <div class="product-card__num-block">
+                        <button class="product-card__minus">-</button>
+                        <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
+                        <button class="product-card__plus">+</button>
                       </div>
                       <button class="product-card__to-cart button button--send"> В корзину </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Add Pagination -->
-              <!-- Add Arrows -->
             </div>
           </div>
         </div>
@@ -1628,9 +1849,11 @@
           </div>
           <div class="footer__info">
             <form>
-              <input type="email" class="footer__send-email">
-              <button class="footer__send-email-btn">
-              </button>
+              <div class="footer__form">
+                <input type="email" class="footer__send-email" required placeholder="example@domain.com">
+                <button class="footer__send-email-btn">
+                </button>
+              </div>
               <p> Подпишитесь на рассылку и получайте уведомления <br> о новых акциях и товарах. </p>
             </form>
             <div class="footer__contacts">

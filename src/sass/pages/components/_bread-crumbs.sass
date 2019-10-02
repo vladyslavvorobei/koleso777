@@ -1,0 +1,93 @@
+.bread-crumbs
+	padding: 60px 0 40px
+	&--left-side
+		margin-right: 30px
+		+r(1199)
+			margin-right: 0
+			margin-bottom: 20px
+	&--right-side
+		display: flex
+		flex-shrink: 0
+		+r(1199)
+			width: 100%
+			justify-content: flex-end
+		+r(991)
+			justify-content: space-between
+			flex-direction: column-reverse
+	&__wrapper
+		padding: 0 20px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		+r(1199)
+			flex-direction: column
+	&__crumbs
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 12px
+		span, a
+			display: block
+			color: $silverChalice
+			margin-right: 5px
+			font-size: 13px
+			position: relative
+			line-height: 1em
+			&:last-of-type
+				margin-right: 0
+		a
+			transition: all .3s ease
+			&::after
+				content: '-'
+				padding-left: 6px
+				font-family: $globalDefaultFont
+				font-size: 13px
+			&:hover
+				color: $mineShaft
+	&__title
+		font-family: $titleFont
+		font-weight: 800
+		font-size: 19px
+		color: $mineShaft
+		line-height: 1em
+		margin: 0
+	&__selects
+		display: flex
+		justify-content: flex-end
+		+r(991)
+			justify-content: space-between
+	&__view
+		display: flex
+		+r(991)
+			margin-bottom: 10px
+			justify-content: flex-end
+		button
+			border: none
+			outline: none
+			background-color: transparent
+			display: flex
+			justify-content: center
+			.icon
+				transition: all .3s ease
+				fill: $silverChalice
+			&.active
+				.icon
+					fill: $mineShaft
+	.select-drop-down
+		+r(991)
+			margin-right: 0
+			align-items: initial
+			&:last-of-type
+				margin-left: 30px
+				+r(575)
+					margin-left: 0
+		+r(767)
+			margin-left: 0
+			margin-right: 0
+		&__input
+			+r(575)
+				max-width: 250px
+		+r(767)
+			width: auto
+
+

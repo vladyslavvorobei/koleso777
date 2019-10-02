@@ -1,5 +1,196 @@
 .goods
-	padding: 40px 0 50px
+	padding: 40px 0 0
+	+r(1199)
+		padding: 40px 0
+.product-card
+	margin: 10px 0 85px
+	padding: 20px
+	background-color: $white
+	transition: all .3s ease
+	position: relative
+	border-radius: 4px
+	+r(1199)
+		border: 1px solid $wildSand
+		margin: 10px 0 20px
+		padding: 20px 20px 30px
+	&__tags
+		position: absolute
+		padding-right: 45px
+		z-index: 1
+	&__tag
+		display: inline-block
+		font-size: 13px
+		color: $mineShaft
+		line-height: 1em
+		padding: 3px 9px
+		margin-right: 4px
+		border-radius: 4px
+		&:last-of-type
+			margin-right: 0
+		&--action
+			background-color: $tag--action
+		&--hit
+			background-color: $tag--hit
+		&--new
+			background-color: $tag--new
+	&__icons
+		position: absolute
+		display: flex
+		flex-direction: column
+		&-wrapper
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+			bottom: 0
+		&--top
+			top: 20px
+			right: 0
+		&--bottom
+			bottom: 0
+			left: 0
+	&__icon
+		display: block
+		.icon
+			fill: $gray
+			transition: all .3s ease
+			&:hover
+				fill: $elm
 
+	&__image
+		position: relative
+		img
+			width: 100%
+			height: auto
+			max-height: 250px
+			object-fit: contain
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 10px
+	&__rating
+		display: flex
+	&__vendor-code
+		font-size: 13px
+		color: $silverChalice
+	&__star
+		position: relative
+		width: 10px
+		height: 10px
+		display: block
+		margin-left: 1px
+		&:first-child
+			margin-left: 0
+		&::before
+			content: ''
+			width: 10px
+			height: 10px
+			position: absolute
+			left: 0
+			top: 0
+			background: url('../img/star-no-checked.svg') center no-repeat
+			background-size: contain
+			transition: all
+		&--checked
+			&::before
+				background: url('../img/star-checked.svg') center no-repeat
+				background-size: contain
 
-
+	&__name
+		font-family: $titleFont
+		font-size: 15px
+		color: $mineShaft
+		line-height: 1.400em
+		font-weight: 600
+		margin-bottom: 25px
+	&__price
+		font-family: $mineShaft
+		font-weight: 800
+		font-size: 19px
+		color: $elm
+		&--old
+			font-family: $globalDefaultFont
+			font-weight: 400
+			font-size: 15px
+			color: $silverChalice
+			text-decoration: line-through
+		&-wrapper
+			+r(1199)
+				margin-bottom: 15px
+	&__num-block
+		width: 120px
+		height: 42px
+		margin-right: 10px
+		display: flex
+		border-radius: 6px
+		flex-shrink: 0
+		+r(767)
+			margin-right: 0
+			margin-bottom: 10px
+		input
+			width: 50px
+			background-color: $wildSand
+			border: none
+			text-align: center
+			font-family: $globalDefaultFont
+			font-weight: 700
+			font-size: 16px
+			color: $silverChalice
+			outline: none
+		button
+			width: 35px
+			display: flex
+			border: none
+			align-items: center
+			background-color: $wildSand
+			font-family: $globalDefaultFont
+			font-weight: 700
+			font-size: 16px
+			color: $silverChalice
+			cursor: pointer
+			outline: none
+	&__minus
+		justify-content: flex-end
+		border-radius: 6px 0 0 6px
+	&__plus
+		justify-content: flex-start
+		border-radius: 0 6px 6px 0
+	&__buttons
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: absolute
+		bottom: -70px
+		left: -1px
+		opacity: 0
+		right: -1px
+		padding: 10px 20px 30px
+		transition: all .3s ease
+		z-index: 1
+		background-color: $white
+		border-radius: 0 0 4px 4px
+		+r(1199)
+			opacity: 1
+			position: relative
+			bottom: 0
+			left: 0
+			right: 0
+			padding: 0
+			flex-direction: column
+			justify-content: center
+	&__to-cart
+		padding: 13.5px 19px
+		flex-shrink: 0
+		&:last-of-type
+			margin-bottom: 0
+			margin-right: 0
+	&:hover
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1)
+		+r(1199)
+			box-shadow: none
+		.product-card__buttons
+			box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1)
+			opacity: 1
+			+r(1199)
+				box-shadow: none

@@ -1,0 +1,28 @@
+.categories
+	&__wrapper
+		display: grid
+		grid-template-columns: 4fr 2fr
+		grid-gap: 20px
+		+r(1199)
+			grid-template-columns: 1fr
+	&__cards
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 20px
+		margin-bottom: 80px
+		+r(1919)
+			grid-template-columns: repeat(3, 1fr)
+		+r(1439)
+			grid-template-columns: repeat(2, 1fr)
+		+r(1199)
+			grid-template-columns: repeat(3,1fr)
+		+r(991)
+			grid-template-columns: repeat(2, 1fr)
+		+r(575)
+			grid-template-columns: 1fr
+	&__card
+		margin: 0
+	+r(767)
+		.product-card__buttons
+			display: flex
+			flex-wrap: wrap
