@@ -118,51 +118,54 @@ $(function() {
 
 
   // SEARCH FORM IN INDEX PAGE
-  const $searchTitle = $('.search-form__title');
-  const $searchInputValue = $('.search-form__result');
-  const $searchList = $('.search-form__list');
-  const $searchListLink = $('.search-form__list a');
-  const $searchFormParentsElem = $('.search-form__elem');
+  function searchForm() {
+    const $searchTitle = $('.search-form__title');
+    const $searchInputValue = $('.search-form__result');
+    const $searchList = $('.search-form__list');
+    const $searchListLink = $('.search-form__list a');
+    const $searchFormParentsElem = $('.search-form__elem');
 
-  const $searchResetForm = $('.button--reset');
+    const $searchResetForm = $('.button--reset');
 
 
-  // CUSTOM SELECT PASS VALUE IN FORM
-  $searchListLink.click(function (e) {
-    e.preventDefault();
-    const $thisParent = $(this).closest($searchFormParentsElem);
-    const $thisParentVal = $thisParent.find($searchInputValue);
-    const $thisText = $(this).text();
-    const $thisValue = $thisParent.find($thisParentVal).val($thisText);
+    // CUSTOM SELECT PASS VALUE IN FORM
+    $searchListLink.click(function (e) {
+      e.preventDefault();
+      const $thisParent = $(this).closest($searchFormParentsElem);
+      const $thisParentVal = $thisParent.find($searchInputValue);
+      const $thisText = $(this).text();
+      const $thisValue = $thisParent.find($thisParentVal).val($thisText);
 
-    const $thisList = $(this).closest($searchFormParentsElem).find($searchList);
-    $thisList.toggleClass('search-form__list--visible').parent().siblings().children().removeClass('search-form__list--visible');
-    const $thisTitle = $thisParent.find($searchTitle);
-    if ($thisValue === false) {
-      console.log('false');
-    } else {
-      $thisTitle.addClass('search-form__title--active');
-    }
-  });
+      const $thisList = $(this).closest($searchFormParentsElem).find($searchList);
+      $thisList.toggleClass('search-form__list--visible').parent().siblings().children().removeClass('search-form__list--visible');
+      const $thisTitle = $thisParent.find($searchTitle);
+      if ($thisValue === false) {
+        console.log('false');
+      } else {
+        $thisTitle.addClass('search-form__title--active');
+      }
+    });
 
-  // DROP CUSTOM MENU IN 'SELECT' AFTER CLICK IN INPUT
-  $searchInputValue.click(function (e) {
-    e.preventDefault();
-    const $thisList = $(this).closest($searchFormParentsElem).find($searchList);
-    $thisList.toggleClass('search-form__list--visible').parent().siblings().children().removeClass('search-form__list--visible');
-  });
+    // DROP CUSTOM MENU IN 'SELECT' AFTER CLICK IN INPUT
+    $searchInputValue.click(function (e) {
+      e.preventDefault();
+      const $thisList = $(this).closest($searchFormParentsElem).find($searchList);
+      $thisList.toggleClass('search-form__list--visible').parent().siblings().children().removeClass('search-form__list--visible');
+    });
 
-  // REMOVE ACTIVE CLASS IN TITLE(LABEL) FORM INPUT AFTER CLICK BUTTON 'RESET'
-  $searchResetForm.click(function () {
-    $(this).closest($('.search-form')).find($('.search-form__title')).removeClass('search-form__title--active');
-  });
+    // REMOVE ACTIVE CLASS IN TITLE(LABEL) FORM INPUT AFTER CLICK BUTTON 'RESET'
+    $searchResetForm.click(function () {
+      $(this).closest($('.search-form')).find($('.search-form__title')).removeClass('search-form__title--active');
+    });
 
-  // CLOSE CUSTOM SELECT IF MOUSEUP
-  $(document).mouseup(function(e) {
-    if ($searchFormParentsElem.has(e.target).length === 0) {
-      $searchList.removeClass('search-form__list--visible');
-    }
-  });
+    // CLOSE CUSTOM SELECT IF MOUSEUP
+    $(document).mouseup(function(e) {
+      if ($searchFormParentsElem.has(e.target).length === 0) {
+        $searchList.removeClass('search-form__list--visible');
+      }
+    });
+  }
+  searchForm();
 
   // TABS IN SELECTION
   $('.selection-block__button').click(function () {
