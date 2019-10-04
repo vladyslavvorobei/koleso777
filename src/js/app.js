@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import slick from 'slick-slider';
+import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min'
 
 $(function() {
 // BURGER MOBILE MENU
@@ -271,7 +272,7 @@ $(function() {
         $(this).closest($('.select-drop-down')).find($titleListLink).removeClass('active');
         $(this).addClass('active');
         $(this).closest($('.select-drop-down')).find($titleList).removeClass('select-drop-down__list--visible');
-      } else if ($(this).closest($('.select-drop-down')).is($('#date'))) {
+      } else {
         $thisParent.find($titleResultVal).text($thisText);
         $(this).closest($('.select-drop-down')).find($titleListLink).removeClass('active');
         $(this).addClass('active');
@@ -367,5 +368,14 @@ $(function() {
         centeredSlides: false,
       },
     }
+  });
+
+  // NEWS-INNER PAGE SLIDER
+
+  const swiperNewsInner = new Swiper('.news-inner__swiper.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 });

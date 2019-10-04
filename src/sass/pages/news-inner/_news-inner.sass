@@ -1,0 +1,65 @@
+.news-inner
+	&__wrapper
+		padding: 20px
+		border-radius: 4px
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+	&__text
+		p, blockquote
+			line-height: 1.375em
+		blockquote
+			font-weight:  700
+			font-size: 24px
+			color: $mineShaft
+			margin-left: 25px
+			position: relative
+			+r(767)
+				margin: 15px
+				font-size: 18px
+			&::before
+				content: ''
+				width: 3px
+				height: 100%
+				left: -25px
+				position: absolute
+				background-color: $mineShaft
+
+	&__images-slider
+		a
+			display: block
+		img
+			display: block
+			width: 100%
+			height: auto
+			min-height: 300px
+			max-height: 600px
+			object-fit: cover
+			object-position: top left
+		.swiper-pagination-progressbar
+			background: $white
+		.swiper-pagination-progressbar-fill
+			background: $elm!important
+			height: 4px
+
+		.swiper-button-next,
+		.swiper-button-prev
+			top: auto
+			bottom: 30px
+			width: 30px
+			height: 30px
+			&::after
+				content: ''
+				width: 15px
+				height: 15px
+			+r(575)
+				bottom: 50px
+		.swiper-button-next
+			right: 25px
+			&::after
+				background: url('../img/right-arrow.svg') center no-repeat
+				background-size: contain
+		.swiper-button-prev
+			left: auto
+			right: 60px
+			&::after
+				background: url('../img/left-arrow.svg') center no-repeat
+				background-size: contain

@@ -55,6 +55,7 @@
 		color: $mineShaft
 		line-height: 1em
 		margin: 0
+		max-width: 720px
 	&__selects
 		display: flex
 		justify-content: flex-end
@@ -77,6 +78,33 @@
 			&.active
 				.icon
 					fill: $mineShaft
+	&__logo
+		a
+			display: flex
+		img
+			display: block
+			width: 100%
+			max-width: 120px
+			height: auto
+			max-height: 60px
+			object-fit: cover
+	&__info
+		h5
+			text-align: left
+			line-height: 1em
+			font-size: 13px
+			color: $silverChalice
+			margin: 0
+			font-weight: 400
+		time, p
+			font-weight: 700
+			padding-right: 15px
+			position: relative
+			color: $mineShaft
+			line-height: 1.5em
+			margin: 0
+		+ .bread-crumbs__info
+			margin-left: 55px
 	.select-drop-down
 		+r(991)
 			margin-right: 0

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body class="body">
@@ -155,131 +156,147 @@
     </header>
     <main>
       <div class="bread-crumbs">
-        <div class="container">
+        <div class="container-limit">
           <div class="bread-crumbs__wrapper">
             <div class="bread-crumbs--left-side">
               <div class="bread-crumbs__crumbs">
                 <span>
                   <a href="#"> Главная </a>
                 </span>
-                <span> Новости </span>
+                <span>
+                  <a href="#"> Новости </a>
+                </span>
+                <span> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </span>
               </div>
-              <h2 class="bread-crumbs__title"> Новости </h2>
+              <h2 class="bread-crumbs__title"> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </h2>
             </div>
             <div class="bread-crumbs--right-side">
               <div class="bread-crumbs__selects">
-                <div class="select-drop-down" id="date">
-                  <span class="select-drop-down__title">Период</span>
-                  <span class="select-drop-down__input">За всё время</span>
-                  <div class="select-drop-down__list">
-                    <ul>
-                      <li>
-                        <a href="#">За всё время</a>
-                      </li>
-                      <li>
-                        <a href="#">За неделю</a>
-                      </li>
-                      <li>
-                        <a href="#">За месяц</a>
-                      </li>
-                      <li>
-                        <a href="#">Сегодня</a>
-                      </li>
-                    </ul>
-                    <button class="select-drop-down__close-btn"> Закрыть </button>
-                  </div>
+                <div class="bread-crumbs__info">
+                  <h5>Категория</h5>
+                  <p>Обзоры</p>
+                </div>
+                <div class="bread-crumbs__info">
+                  <h5>Дата</h5>
+                  <time datetime="2019-06-16">16.06.19</time>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="news-page">
-        <div class="container">
-          <div class="news-page__wrapper">
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-1.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Полезное </div>
-                <time class="news-card__time" datetime="2019-06-23"> 23.06.19 </time>
+      <div class="news-inner">
+        <div class="container-limit">
+          <div class="news-inner__wrapper">
+            <div class="news-inner__images-slider">
+              <div class="news-inner__swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a data-fancybox="news-inner" href="img/inner-news-slider.png">
+                      <img src="img/inner-news-slider.png" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a data-fancybox="news-inner" href="img/inner-news-slider.png">
+                      <img src="img/inner-news-slider.png" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a data-fancybox="news-inner" href="img/inner-news-slider.png">
+                      <img src="img/inner-news-slider.png" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
               </div>
-              <h3 class="news-card__title"> Маркировка, конструкция, классификация, выбор, монтаж и эксплуатация шин для внедорожников. </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-2.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Технологии </div>
-                <time class="news-card__time" datetime="2019-06-23"> 18.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Michelin AR2 - гениальность в простоте или утрируемый рекламный ход? Обсуждаем мнения независимых критиков. </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-3.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Обзоры </div>
-                <time class="news-card__time" datetime="2019-06-23"> 16.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-4.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Превью </div>
-                <time class="news-card__time" datetime="2019-06-23"> 10.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Квинтэссенция шин Apollo. Каким будет следующий ход Онкара Карвара? </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-1.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Полезное </div>
-                <time class="news-card__time" datetime="2019-06-23"> 23.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Маркировка, конструкция, классификация, выбор, монтаж и эксплуатация шин для внедорожников. </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-2.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Технологии </div>
-                <time class="news-card__time" datetime="2019-06-23"> 18.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Michelin AR2 - гениальность в простоте или утрируемый рекламный ход? Обсуждаем мнения независимых критиков. </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-3.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Обзоры </div>
-                <time class="news-card__time" datetime="2019-06-23"> 16.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-4.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Превью </div>
-                <time class="news-card__time" datetime="2019-06-23"> 10.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Квинтэссенция шин Apollo. Каким будет следующий ход Онкара Карвара? </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-3.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Обзоры </div>
-                <time class="news-card__time" datetime="2019-06-23"> 16.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </h3>
-            </a>
-            <a href="#" class="news-page__card news-card">
-              <img src="img/news-4.png" alt="" class="news-card__img">
-              <div class="news-card__info">
-                <div class="news-card__tags"> Превью </div>
-                <time class="news-card__time" datetime="2019-06-23"> 10.06.19 </time>
-              </div>
-              <h3 class="news-card__title"> Квинтэссенция шин Apollo. Каким будет следующий ход Онкара Карвара? </h3>
-            </a>
+            </div>
+            <div class="news-inner__text">
+              <p> Изменение глобальной стратегии спорадически создает повседневный медийный канал. Производство концентрирует целевой трафик, отвоевывая рыночный сегмент. Рыночная информация, на первый взгляд, подсознательно искажает бренд. По сути, PR позиционирует комплексный рекламный клаттер. </p>
+              <p> Не факт, что позиционирование на рынке усиливает BTL. Рыночная информация переворачивает потребительский медиаплан. Практика однозначно показывает, что селекция бренда экономит креативный клиентский спрос. Инвестиция, отбрасывая подробности, экономит conversion rate. </p>
+              <blockquote>
+                <p> Ударная волна, как того требуют законы термодинамики, расщепляет разрыв. Расслоение ускоряет экситон. Кристаллическая решетка представляет собой межатомный кварк. </p>
+              </blockquote>
+              <p> Силовое поле синфазно возбуждает поток, поскольку любое другое поведение нарушало бы изотропность пространства. </p>
+              <p> Не только в вакууме, но и в любой нейтральной среде относительно низкой плотности тело катастрофично нейтрализует плазменный эксимер. Квант, вследствие квантового характера явления, отражает ультрафиолетовый кварк в том случае, когда процессы переизлучения спонтанны. </p>
+              <p> Электрон устойчиво поглощает расширяющийся электрон. Не только в вакууме, но и в любой нейтральной среде относительно низкой плотности квантовое состояние поглощает квантово-механический резонатор. Квазар, в согласии с традиционными представлениями, поглощает магнит, однозначно свидетельствуя о неустойчивости процесса в целом. Взвесь изотермично выталкивает плазменный фотон независимо от расстояния до горизонта событий. </p>
+              <p> Магнит заряжает квазар - все дальнейшее далеко выходит за рамки текущего исследования и не будет здесь рассматриваться. Вещество переворачивает газ, что лишний раз подтверждает правоту Эйнштейна. Плазменное образование отклоняет расширяющийся луч. </p>
+            </div>
           </div>
         </div>
       </div>
+      <section class="news">
+        <div class="container">
+          <div class="title__line">
+            <h2 class="title">
+              <a href="#" class="active"> Новости </a>
+            </h2>
+            <a href="news.html" class="watch-all"> Перейти ко всем </a>
+            <div class="slider-nav">
+              <div class="slider-nav-prev news__swiper-button-prev swiper-button-prev"></div>
+              <div class="slider-nav-next news__swiper-button-next swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="news__slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="news__card news-card">
+                    <img src="img/news-1.png" alt="" class="news-card__img">
+                    <div class="news-card__info">
+                      <div class="news-card__tags"> Полезное </div>
+                      <time class="news-card__time" datetime="2019-06-23"> 23.06.19 </time>
+                    </div>
+                    <h3 class="news-card__title"> Маркировка, конструкция, классификация, выбор, монтаж и эксплуатация шин для внедорожников. </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="news__card news-card">
+                    <img src="img/news-2.png" alt="" class="news-card__img">
+                    <div class="news-card__info">
+                      <div class="news-card__tags"> Технологии </div>
+                      <time class="news-card__time" datetime="2019-06-23"> 18.06.19 </time>
+                    </div>
+                    <h3 class="news-card__title"> Michelin AR2 - гениальность в простоте или утрируемый рекламный ход? Обсуждаем мнения независимых критиков. </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="news__card news-card">
+                    <img src="img/news-3.png" alt="" class="news-card__img">
+                    <div class="news-card__info">
+                      <div class="news-card__tags"> Обзоры </div>
+                      <time class="news-card__time" datetime="2019-06-23"> 16.06.19 </time>
+                    </div>
+                    <h3 class="news-card__title"> Суровые полевые испытания Proxes CF2 от Toyo. Чего стоит ожидать от новинки японского производителя? </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="news__card news-card">
+                    <img src="img/news-4.png" alt="" class="news-card__img">
+                    <div class="news-card__info">
+                      <div class="news-card__tags"> Превью </div>
+                      <time class="news-card__time" datetime="2019-06-23"> 10.06.19 </time>
+                    </div>
+                    <h3 class="news-card__title"> Квинтэссенция шин Apollo. Каким будет следующий ход Онкара Карвара? </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="news__card news-card">
+                    <img src="img/news-1.png" alt="" class="news-card__img">
+                    <div class="news-card__info">
+                      <div class="news-card__tags"> Полезное </div>
+                      <time class="news-card__time" datetime="2019-06-23"> 08.06.19 </time>
+                    </div>
+                    <h3 class="news-card__title"> Выбор, монтаж и эксплуатация дисков. </h3>
+                  </a>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <!-- Add Arrows -->
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">

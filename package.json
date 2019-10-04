@@ -72,6 +72,7 @@
     "lodash": "^4.17.11"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "autoresize-textarea": "^1.1.3",
     "i": "^0.3.6",
     "normalize-scss": "^7.0.1",
