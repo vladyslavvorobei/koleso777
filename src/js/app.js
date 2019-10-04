@@ -249,11 +249,11 @@ $(function() {
 
 
     $titleListLink.click(function (e) {
+      e.preventDefault();
+      const $thisParent = $(this).closest($titleParent);
+      const $titleResultVal = $thisParent.find($titleResult);
+      const $thisText = $(this).text();
       if($(this).closest($('.select-drop-down')).is($('#tags'))) {
-        e.preventDefault();
-        const $thisParent = $(this).closest($titleParent);
-        const $titleResultVal = $thisParent.find($titleResult);
-        const $thisText = $(this).text();
         const $thisIndexOf = $titleArray.indexOf($thisText);
         if ($thisIndexOf !== -1) {
           $titleArray.splice($thisIndexOf, 1);
@@ -267,16 +267,17 @@ $(function() {
           $(this).closest($titleParent).find($titleResult).text('Выбрать фильтр');
         }
       } else if ($(this).closest($('.select-drop-down')).is($('#size'))) {
-        e.preventDefault();
-        const $thisParent = $(this).closest($titleParent);
-        const $titleResultVal = $thisParent.find($titleResult);
-        const $thisText = $(this).text();
         $thisParent.find($titleResultVal).text($thisText);
         $(this).closest($('.select-drop-down')).find($titleListLink).removeClass('active');
         $(this).addClass('active');
         $(this).closest($('.select-drop-down')).find($titleList).removeClass('select-drop-down__list--visible');
-      }
-    });
+      } else if ($(this).closest($('.select-drop-down')).is($('#date'))) {
+        $thisParent.find($titleResultVal).text($thisText);
+        $(this).closest($('.select-drop-down')).find($titleListLink).removeClass('active');
+        $(this).addClass('active');
+        $(this).closest($('.select-drop-down')).find($titleList).removeClass('select-drop-down__list--visible');
+        }
+      });
 
     $('.select-drop-down__close-btn').click(function (e) {
       e.preventDefault();

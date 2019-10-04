@@ -110,78 +110,92 @@
 			width: 100%
 			height: auto
 			object-fit: contain
-.select-panel
-	display: flex
-	justify-content: space-between
-	padding: 20px 20px 10px
-	background-color: $elm
-	border-radius: 6px
-	margin-bottom: 60px
-	align-items: flex-start
-	+r(575)
-		margin-bottom: 20px
-		flex-direction: column
-	&__block
-		display: flex
-		flex-wrap: wrap
-		+r(575)
-			flex-direction: column
-			width: 100%
-	&__elem
-		position: relative
-		margin-right: 15px
-		margin-bottom: 10px
-		+r(575)
-			margin-right: 0
-		&::after
-			left: auto
-			right: 15px
-		&:last-of-type
-			margin-right: 0
-	&__result
-		background-color: $white
-		&#rimWidth
-			width: 170px
-			+r(575)
-				width: 100%
-		&#numberOfMountingHoles
-			width: 270px
-			+r(575)
-				width: 100%
-		&#holeDiameter
-			width: 300px
-			+r(575)
-				width: 100%
-		&#diameterCenterHoles
-			width: 250px
-			+r(575)
-				width: 100%
-		&#departure
-			width: 150px
-			+r(575)
-				width: 100%
-	&__title
-		max-width: none
-		+r(575)
-			right: 30px
-		&.search-form__title--active
-			+r(575)
-				right: 0
-				transform: translateY(5px) scale(.75) translateX(-16%)
-	&__list
-		top: 102%
-	&__more
-		font-family: $globalDefaultFont
-		font-size: 13px
-		color: $silverChalice
-		background-color: $white
+	&__car-models
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		grid-gap: 20px
+		padding:  55px 40px 65px
 		border-radius: 4px
-		border: none
-		padding: 13.4px 11.3px
-		transition: all .3s ease
-		flex-shrink: 0
-		margin-left: 10px
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1)
+		+r(1619)
+			grid-template-columns: repeat(6, 1fr)
+		+r(1439)
+			grid-template-columns: repeat(5, 1fr)
+		+r(1199)
+			grid-template-columns: repeat(6, 1fr)
+		+r(991)
+			grid-template-columns: repeat(4, 1fr)
+		+r(767)
+			grid-template-columns: repeat(3, 1fr)
 		+r(575)
-			margin-left: 0
-		&:hover
-			color: $mineShaft
+			grid-template-columns: repeat(2, 1fr)
+			padding: 40px 15px 45px
+		h3
+			font-family: $titleFont
+			font-weight: 800
+			font-size: 19px
+			text-transform: uppercase
+			line-height: 1em
+			margin: 0 0 25px
+			padding-left: 15px
+		a
+			display: block
+			cursor: pointer
+			font-weight: 800
+			font-size: 16px
+			color: $silverChalice
+			padding-left: 15px
+			position: relative
+			transition: all .3s ease
+			line-height: 1em
+			margin-bottom: 12px
+			&::before
+				content: ''
+				width: 4px
+				height: 4px
+				border-bottom: 2px solid $silverChalice
+				border-left: 2px solid $silverChalice
+				position: absolute
+				left: 0
+				top: calc( 50% - 3px )
+				transform: rotate(-135deg)
+				opacity: 0
+				transition: all .3s ease
+			&:hover
+				color: $mineShaft
+				&::before
+					opacity: 1
+					border-color: $mineShaft
+
+
+	&__brands
+		border-top: 1px solid $gallery
+		padding-top: 60px
+		+r(991)
+			padding-top: 40px
+		+r(575)
+			padding-top: 30px
+		&-list
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-gap: 20px
+			+r(1199)
+				grid-template-columns: repeat(3, 1fr)
+			+r(767)
+				grid-template-columns: repeat(2, 1fr)
+			a
+				display: flex
+				justify-content: center
+				transition: all .3s ease
+				border-radius: 4px
+				&:hover
+					box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+				img
+					display: block
+					width: 100%
+					height: auto
+					max-width: 120px
+					max-height: 90px
+					object-fit: contain
+
+

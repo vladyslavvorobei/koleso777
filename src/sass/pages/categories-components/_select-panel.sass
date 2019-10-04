@@ -1,0 +1,106 @@
+.select-panel
+	display: flex
+	justify-content: space-between
+	padding: 20px 20px 10px
+	background-color: $elm
+	border-radius: 6px
+	margin-bottom: 60px
+	align-items: flex-start
+	+r(1619)
+		padding: 20px
+	+r(575)
+		margin-bottom: 20px
+		flex-direction: column
+	&__block
+		display: flex
+		flex-wrap: wrap
+		+r(1619)
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			width: 100%
+			grid-gap: 15px
+		+r(1439)
+			grid-template-columns: repeat(3, 1fr)
+		+r(1199)
+			grid-template-columns: repeat(2, 1fr)
+		+r(575)
+			grid-template-columns: 1fr
+		&--drop-btn
+			display: flex
+			+r(1619)
+				justify-content: flex-end
+				width: auto
+			+r(575)
+				width: 100%
+		+ .select-panel__block
+			+r(575)
+				margin-top: 15px
+	&__elem
+		position: relative
+		margin-right: 15px
+		margin-bottom: 10px
+		+r(1619)
+			margin-right: 0
+			margin-bottom: 0
+
+		&::after
+			left: auto
+			right: 15px
+		&:last-of-type
+			margin-right: 0
+	&__result
+		background-color: $white
+		width: 240px
+		+r(1619)
+			width: 100%
+		&#rimWidth
+			width: 170px
+			+r(1619)
+				width: 100%
+		&#diameter
+			width: 120px
+			+r(1619)
+				width: 100%
+		&#numberOfMountingHoles
+			width: 270px
+			+r(1619)
+				width: 100%
+		&#holeDiameter
+			width: 300px
+			+r(1619)
+				width: 100%
+		&#diameterCenterHoles
+			width: 250px
+			+r(1619)
+				width: 100%
+		&#departure
+			width: 150px
+			+r(1619)
+				width: 100%
+
+	&__title
+		max-width: none
+		+r(767)
+			right: 30px
+		&.search-form__title--active
+			+r(575)
+				right: 0
+				transform: translateY(5px) scale(.75) translateX(-16%)
+	&__list
+		top: 102%
+	&__more
+		font-family: $globalDefaultFont
+		font-size: 13px
+		color: $silverChalice
+		background-color: $white
+		border-radius: 4px
+		border: none
+		padding: 13.4px 11.3px
+		transition: all .3s ease
+		flex-shrink: 0
+		margin-left: 15px
+		+r(575)
+			margin-left: 0
+			width: 100%
+		&:hover
+			color: $mineShaft
