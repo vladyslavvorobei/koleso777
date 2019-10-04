@@ -155,129 +155,101 @@
     </header>
     <main>
       <div class="bread-crumbs">
-        <div class="container">
+        <div class="container-limit">
           <div class="bread-crumbs__wrapper">
             <div class="bread-crumbs--left-side">
               <div class="bread-crumbs__crumbs">
                 <span>
                   <a href="#"> Главная </a>
                 </span>
-                <span>
-                  <a href="#"> Автошины </a>
-                </span>
-                <span> Подбор шин </span>
+                <span> Партнёры </span>
               </div>
-              <h2 class="bread-crumbs__title"> Подбор шин </h2>
+              <h2 class="bread-crumbs__title"> Партнёры сервиса </h2>
             </div>
           </div>
         </div>
       </div>
-      <div class="categories">
-        <div class="container">
-          <div class="categories__wrapper categories__brands">
-            <div class="categories__section">
-              <ul class="categories__brands-list">
-                <li>
-                  <a href="partnership.html">
-                    <img src="img/1-1.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/2-2.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/3-3.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/4-4.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/5-5.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/6-6.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/7-7.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/8-8.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/1-1.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/2-2.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/3-3.png" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="img/4-4.png" alt="">
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="categories__section">
-              <ul class="categories__nav">
-                <li>
-                  <a href="categories-list.html" class="categories__nav-link categories__nav-link--active"> Подбор шин </a>
-                </li>
-                <li>
-                  <a href="#" class="categories__nav-link"> Каталог шин </a>
-                </li>
-                <li>
-                  <a href="#" class="categories__nav-link"> Калькулятор шин и дисков </a>
-                </li>
-                <li>
-                  <a href="#" class="categories__nav-link"> Тесты шин </a>
-                </li>
-              </ul>
-              <div class="categories__banner">
-                <img src="img/banner540x760.png" alt="">
+      <div class="partnership">
+        <div class="container-limit">
+          <div class="partnership__wrapper">
+            <ul class="categories__brands-list">
+              <li>
+                <a href="partnership.html">
+                  <img src="img/1-1.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/2-2.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/3-3.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/4-4.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/5-5.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/6-6.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/7-7.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/8-8.png" alt="">
+                </a>
+              </li>
+            </ul>
+            <form class="partnership__form form-partners">
+              <h5> Приглашаем клубы автомобилистов </h5>
+              <h3> Стать партнёром </h3>
+              <div class="form-partners__row form-partners__row--elems">
+                <div class="form-partners__elem">
+                  <label for="name-ps" class="form-partners__label"> Ваше имя </label>
+                  <input type="text" id="name-ps" name="name" class="form-partners__input" required>
+                </div>
+                <div class="form-partners__elem">
+                  <label for="email-ps" class="form-partners__label"> Электронная почта </label>
+                  <input type="email" id="email-ps" name="email" class="form-partners__input" required>
+                </div>
+                <div class="form-partners__elem">
+                  <label for="phone-ps" class="form-partners__label"> Номер телефона </label>
+                  <input type="tel" id="phone-ps" name="phone" class="form-partners__input" required>
+                </div>
+                <div class="form-partners__elem">
+                  <label for="link-ps" class="form-partners__label"> Ссылка на сайт </label>
+                  <input type="text" id="link-ps" name="link" class="form-partners__input">
+                </div>
               </div>
-            </div>
+              <div class="form-partners__row form-partners__row--textarea">
+                <div class="form-partners__elem">
+                  <label for="message-ps" class="form-partners__label"> Сообщение </label>
+                  <textarea name="message" id="message-ps" rows="4" class="form-partners__input"></textarea>
+                </div>
+              </div>
+              <div class="form-partners__row form-partners__row--buttons">
+                <p> Отправляя заявку с сайта я подтверждаю, что согласен на <a href="#"> обработку персональных данных. </a>
+                </p>
+                <button class="button button--send"> Отправить заявку </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      <section class="about">
-        <div class="container">
-          <div class="about__wrapper">
-            <div class="about__title">
-              <h2> Интернет-магазин <br> автомобильных шин <br> и дисков. Оказание <br> услуг шиномонтажа. </h2>
-            </div>
-            <div class="about__text">
-              <p> Изменение глобальной стратегии спорадически создает повседневный медийный канал. Производство концентрирует целевой трафик, отвоевывая рыночный сегмент. Рыночная информация, на первый взгляд, подсознательно искажает бренд. По сути, PR позиционирует комплексный рекламный клаттер. </p>
-              <p> Не факт, что позиционирование на рынке усиливает BTL. Рыночная информация переворачивает потребительский медиаплан. Практика однозначно показывает, что селекция бренда экономит креативный клиентский спрос. </p>
-              <p>
-                <strong>Инвестиция отталкивает общественный BTL, опираясь на опыт западных коллег. Стимулирование коммьюнити, согласно Ф.Котлеру, специфицирует стратегический сегмент рынка.</strong> Анализ рыночных цен индуктивно программирует ролевой ребрендинг. </p>
-              <p> Принцип восприятия решительно трансформирует коллективный рекламный макет, не считаясь с затратами. </p>
-              <button class="button button--send"> Подробнее </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer">
       <div class="container">

@@ -378,4 +378,21 @@ $(function() {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // FORM PARTNERSHIP
+  const $input = $('.form-partners__input');
+
+  function formLabel(elem) {
+
+  }
+
+  $input.focus(function() {
+    $(this).prev($input).addClass('form-partners__label--active');
+  });
+  $input.focusout(function() {
+   if ($(this).val() === '' && ' ') {
+     $(this).prev($input).removeClass('form-partners__label--active');
+   }
+  });
+
 });

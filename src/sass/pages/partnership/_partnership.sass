@@ -1,0 +1,103 @@
+.partnership
+	padding: 10px 0 100px
+	+r(991)
+		padding: 10px 0 40px
+	.categories__brands-list
+		margin-bottom: 60px
+		+r(991)
+			margin-bottom: 40px
+		+r(575)
+			margin-bottom: 30px
+
+.form-partners
+	position: relative
+	padding: 60px 60px 40px
+	border-radius: 4px
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+	+r(767)
+		padding: 35px
+	+r(575)
+		padding: 20px
+	h5
+		text-align: left
+		line-height: 1em
+		font-size: 13px
+		color: $silverChalice
+		margin: 0
+		font-weight: 400
+		margin-bottom: 12px
+	h3
+		font-family: $titleFont
+		font-weight: 800
+		font-size: 19px
+		color: $mineShaft
+		line-height: 1.421em
+		margin: 0 0 28px
+		max-width: 720px
+	&__row
+		margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 0
+		&--elems
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-gap: 20px
+			+r(991)
+				grid-template-columns: repeat(2, 1fr)
+			+r(575)
+				grid-template-columns: 1fr
+		&--buttons
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			+r(767)
+				flex-direction: column-reverse
+			.button
+				margin: 0 0 0 50px
+				+r(767)
+					margin: 0 0 20px 0
+				+r(575)
+					max-width: none
+			p
+				max-width: 295px
+				margin: 0
+				font-size: 13px
+				color: $silverChalice
+				line-height: 1em
+				+r(767)
+					text-align: center
+				a
+					color: $elm
+					transition: all .3s ease
+					&:hover
+						color: $mineShaft
+	&__elem
+		position: relative
+		box-sizing: border-box
+	&__input
+		border-radius: 6px
+		background-color: $wildSand
+		border: none
+		line-height: 1em
+		font-size: 16px
+		font-family: $globalDefaultFont
+		color: $silverChalice
+		outline: none
+		padding: 11.5px 14px
+		width: 100%
+		display: block
+		box-sizing: border-box
+		+ls($globalLetterSpacing)
+		resize: none
+	&__label
+		position: absolute
+		line-height: 1em
+		font-size: 16px
+		font-family: $globalDefaultFont
+		color: $silverChalice
+		left: 14px
+		top: 13px
+		transition: all .3s ease
+		&--active
+			transform: translateY(-22px)
+			color: $mineShaft
