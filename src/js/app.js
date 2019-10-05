@@ -395,4 +395,16 @@ $(function() {
    }
   });
 
+  // SERVICES PAGE TABS
+
+  const $tabsItem = $('.services__table');
+  const $tabsNavBtn = $('.services__nav li');
+
+  $tabsItem.not(':first').hide();
+  $tabsNavBtn.click(function(e) {
+    e.preventDefault();
+    $tabsNavBtn.removeClass('active').eq($(this).index()).addClass('active');
+    $tabsItem.hide().eq($(this).index()).fadeIn();
+  }).eq(0).addClass('active');
+
 });

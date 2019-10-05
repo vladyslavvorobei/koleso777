@@ -1,0 +1,122 @@
+.services
+	position: relative
+	padding: 10px 0 80px
+	+r(991)
+		padding: 10px 0 40px
+	&__nav
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid $gallery
+		margin-bottom: 40px
+		+r(1199)
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			border: 1px solid $gallery
+		+r(991)
+			grid-template-columns: repeat(3, 1fr)
+			margin-bottom: 30px
+		+r(767)
+			grid-template-columns: repeat(2, 1fr)
+		+r(575)
+			grid-template-columns: 1fr
+			margin-bottom: 20px
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100%
+			color: $silverChalice
+			font-size: 16px
+			font-weight: 700
+			background-color: $white
+			transition: all .3s ease
+			position: relative
+			line-height: 1em
+			padding: 13px 28px
+			text-align: center
+			border-radius: 4px 4px 0 0
+			border: 1px solid $gallery
+			border-bottom: none
+			box-sizing: border-box
+			+r(1619)
+				padding: 13px 20px
+			+r(1199)
+				width: 100%
+				border: none
+				border-radius: 0
+			&::before
+				content: ''
+				width: 100%
+				height: 1px
+				bottom: -1px
+				left: 0
+				background-color: transparent
+				position: absolute
+				transition: all .3s ease
+				z-index: 1
+				+r(1199)
+					background-color: $gallery
+		li
+			display: flex
+			justify-content: center
+			align-items: flex-end
+			box-sizing: border-box
+			&.active
+				a
+					color: $white
+					background-color: $elm
+					border-color: $elm
+					&::before
+						background-color: $elm
+.table
+	border-radius: 4px
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+	&__header
+		background-color: $elm
+		border-radius: 4px 4px 0 0
+		h3
+			margin: 0
+			font-family: $globalDefaultFont
+			font-weight: 700
+			font-size: 16px
+			color: $white
+			line-height:  1.4em
+			padding: 10px 80px 10px 25px
+			position: relative
+			&::after
+				content: ''
+				width: 18px
+				height: 2px
+				background-color: $white
+				position: absolute
+				top: calc( 50% - 1px )
+				right: 25px
+	&__content
+		li
+			display: flex
+			justify-content: space-between
+			padding: 10px 25px
+			line-height:  1.4em
+			font-weight: 700
+			color: $silverChalice
+			align-items: center
+			+r(575)
+				flex-wrap: wrap
+				line-height: 1.2em
+			span
+				max-width: 70%
+				+r(575)
+					max-width: 100%
+					width: 100%
+					margin-bottom: 10px
+				&:nth-of-type(2)
+					max-width: 30%
+					margin-left: 20px
+					text-align: right
+					+r(575)
+						max-width: 100%
+						width: 100%
+						margin-left: 0
+						margin-bottom: 0
+			&:nth-of-type(even)
+				background-color: $wildSand
