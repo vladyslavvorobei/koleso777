@@ -1,0 +1,23 @@
+.about-page
+	&__text
+		padding: 80px 60px 80px 135px
+		column-count: 2
+		column-gap: 50px
+		+r(1199)
+			column-count: 1
+			padding: 80px 60px
+		+r(991)
+			padding: 40px
+		+r(767)
+			padding: 40px 20px
+		p
+			margin: 0 0 30px
+			+r(991)
+				margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 0
+
+	&__info
+		padding-bottom: 80px
+		+r(991)
+			padding-bottom: 40px
