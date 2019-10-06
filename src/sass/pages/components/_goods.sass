@@ -126,8 +126,9 @@
 		border-radius: 6px
 		flex-shrink: 0
 		+r(767)
-			margin-right: 0
-			margin-bottom: 10px
+			margin: 0 auto 10px
+		+r(575)
+			margin: 0 auto 10px 0
 		input
 			width: 50px
 			background-color: $wildSand
@@ -177,14 +178,23 @@
 			left: 0
 			right: 0
 			padding: 0
-			flex-direction: column
-			justify-content: center
+			justify-content: space-between
+		+r(767)
+			flex-wrap: wrap
 	&__to-cart
 		padding: 13.5px 19px
 		flex-shrink: 0
 		&:last-of-type
 			margin-bottom: 0
 			margin-right: 0
+		+r(767)
+			margin: 0 auto 10px
+			&:last-of-type
+				margin: 0 auto 10px
+		+r(575)
+			margin: 0 0 10px auto
+			&:last-of-type
+				margin: 0 0 10px auto
 	&:hover
 		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1)
 		+r(1199)

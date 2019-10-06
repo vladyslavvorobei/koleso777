@@ -407,4 +407,28 @@ $(function() {
     $tabsItem.hide().eq($(this).index()).fadeIn();
   }).eq(0).addClass('active');
 
+  // CARD PAGE SLIDER
+  const swiperCardPage = new Swiper('.card-page__slider .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.goods__swiper-button-next',
+      prevEl: '.goods__swiper-button-prev',
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+      992: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+      1200: {
+        slidesPerView: 4,
+        centeredSlides: false,
+      }
+    }
+  });
 });

@@ -1,0 +1,207 @@
+.card-page
+	&__card
+		display: grid
+		grid-template-columns: 3fr 5fr
+		border-radius: 4px
+		background-color: $white
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+		margin-bottom: 60px
+		overflow: hidden
+		+r(991)
+			grid-template-columns: 1fr
+	&__left-side
+		padding: 25px 20px 20px
+		position: relative
+		border-right: 1px solid $gallery
+		.product-card__icons-wrapper
+			z-index: 1
+		.product-card
+			&__image
+				display: flex
+				height: 100%
+				margin: 30px 0
+			&__icons
+				&--top
+					top: 25px
+					right: 20px
+				&--bottom
+					bottom: 20px
+					left: 20px
+		img
+			display: block
+			margin: auto
+	&__title
+		background-color: $elm
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 9px 25px
+		&-left
+			margin-right: 15px
+			ul
+				display: flex
+				flex-wrap: wrap
+			li
+				position: relative
+				padding-right: 60px
+				margin: 10px 0
+				+r(1199)
+					padding-right: 40px
+				&::after
+					content: '/'
+					position: absolute
+					right: 25px
+					top: 10px
+					font-size: 19px
+					font-family: $titleFont
+					color: rgba($white, .3)
+					+r(1199)
+						right: 20px
+					+r(575)
+						content: none
+				&:last-of-type
+					padding-right: 0
+					&::after
+						content: none
+				h3
+					margin: 0 0 5px
+					line-height: 1em
+					font-size: 13px
+					color: rgba($white, .4)
+				span
+					line-height: 1em
+					font-family: $titleFont
+					font-weight: 600
+					font-size: 19px
+					color: $white
+					+r(1199)
+						font-size: 16px
+		&-right
+			margin: 10px 0 10px auto
+	&__description
+		position: absolute
+		right: 20px
+		bottom: 20px
+		width: 200px
+		text-align: right
+		font-size: 13px
+		line-height: 1.2em
+		color: $silverChalice
+	&__star-rating
+		display: flex
+		flex-shrink: 0
+	&__star
+		width: 16px
+		height: 16px
+		background: url('../img/star-no-checked--white.svg') center no-repeat
+		background-size: contain
+		&--checked
+			background: url('../img/star-checked--white.svg') center no-repeat
+			background-size: contain
+	&__container
+		display: flex
+		justify-content: space-between
+		+r(767)
+			flex-direction: column
+	&__char
+		padding: 35px 25px 25px
+		+r(767)
+			padding: 30px 15px 15px
+		h5
+			font-size: 18px
+			font-weight: 800
+			color: $silverChalice
+			margin: 0 0 20px
+			span
+				color: $mineShaft
+		ul
+			margin-bottom: 25px
+		li
+			display: block
+			margin-bottom: 5px
+			line-height: 1.2em
+			color: $silverChalice
+			span
+				color: $mineShaft
+				font-weight: 700
+	&__char-more-btn
+		display: block
+		border: none
+		border-bottom: 1px solid $elm
+		background-color: transparent
+		font-family: $globalDefaultFont
+		font-size: 16px
+		color: $elm
+		padding: 0
+		transition: all .3s ease
+		&:hover
+			border-bottom: 1px solid transparent
+	&__info
+		max-width: 255px
+		padding: 35px 25px 25px
+		border-left: 1px solid $gallery
+		+r(767)
+			max-width: none
+			padding: 15px 15px 20px
+		h4
+			margin: 0 0 5px
+			font-family: $globalDefaultFont
+			font-size: 15px
+			color: $silverChalice
+			line-height: 1.2em
+		p
+			font-family: $titleFont
+			font-weight: 600
+			font-size: 19px
+			color: $elm
+			margin: 0 0 24px
+			&:last-of-type
+				margin-bottom: 70px
+				+r(767)
+					margin-bottom: 25px
+	&__buy
+		p
+			font-size: 25px
+			margin-bottom: 25px
+			&:last-of-type
+				margin-bottom: 25px
+	&__buttons
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		.product-card__num-block
+			margin-bottom: 10px
+			+r(767)
+				margin: 0 10px 10px 0
+		button
+			margin: 0
+			&.button
+				padding: 13.5px 19px
+				margin-bottom: 10px
+				&--full
+					width: 100%
+					margin-right: 0
+					margin-bottom: 0
+					+r(575)
+						max-width: none
+	&-services
+		padding: 10px 0 65px
+		+r(991)
+			padding: 10px 0 40px
+		.services__nav
+			justify-content: flex-start
+			li
+				margin-right: 6px
+			a
+				min-width: 160px
+	&__char-tab
+		p
+			max-width: 900px
+			margin: 0 0 15px
+			color: $mineShaft
+			&:last-of-type
+				margin-bottom: 0
+			+r(991)
+				max-width: none
+
