@@ -20,16 +20,84 @@
     <!-- BEGIN scripts -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=198b4f0c-3bac-4781-9c61-51a96525dd8a" type="text/javascript"></script>
     <script src="js/app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
     <script>
-        var myMap;
         ymaps.ready(init);
-        function init () {
-            myMap = new ymaps.Map('map', {
-
-                center: [55.446451, 37.618503], // Москва
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.44644756622292,37.618576005384874],
                 zoom: 16
-            }, {
-                searchControlProvider: 'yandex#search'
+            });
+
+            var myIcon = new ymaps.GeoObjectCollection({}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/myIcon.png',
+                iconImageSize: [46, 63],
+                iconImageOffset: [-23, -63]
+            });
+
+            myPlacemarkOne = new ymaps.Placemark(
+                [55.446503227698706,37.61841916303229],
+                {
+                    balloonContentHeader: '<div class="map-header">Колесо777 </div>',
+                    balloonContentFooter: '<div class="map-footer"> До 19:00 <img src="img/star-gray.svg" class="map-img"><strong>4.0</strong></div>',
+                    hintContent: 'Колесо777'
+                }
+            );
+            myPlacemarkTwo = new ymaps.Placemark(
+                [56.446503227698706,37.61841916303229],
+                {
+                    balloonContentHeader: '<div class="map-header">Колесо777 </div>',
+                    balloonContentFooter: '<div class="map-footer"> До 19:00 <img src="img/star-gray.svg" class="map-img"><strong>4.0</strong></div>',
+                    hintContent: 'Колесо777'
+                }
+            );
+            myPlacemarkThree = new ymaps.Placemark(
+                [57.446503227698706,37.61841916303229],
+                {
+                    balloonContentHeader: '<div class="map-header">Колесо777 </div>',
+                    balloonContentFooter: '<div class="map-footer"> До 19:00 <img src="img/star-gray.svg" class="map-img"><strong>4.0</strong></div>',
+                    hintContent: 'Колесо777'
+                }
+            );
+            myPlacemarkFour = new ymaps.Placemark(
+                [58.446503227698706,37.61841916303229],
+                {
+                    balloonContentHeader: '<div class="map-header">Колесо777 </div>',
+                    balloonContentFooter: '<div class="map-footer"> До 19:00 <img src="img/star-gray.svg" class="map-img"><strong>4.0</strong></div>',
+                    hintContent: 'Колесо777'
+                }
+            );
+            myPlacemarkFive = new ymaps.Placemark(
+                [59.446503227698706,37.61841916303229],
+                {
+                    balloonContentHeader: '<div class="map-header">Колесо777 </div>',
+                    balloonContentFooter: '<div class="map-footer"> До 19:00 <img src="img/star-gray.svg" class="map-img"><strong>4.0</strong></div>',
+                    hintContent: 'Колесо777'
+                }
+            );
+
+
+            myIcon
+                .add(myPlacemarkOne)
+                .add(myPlacemarkTwo)
+                .add(myPlacemarkThree)
+                .add(myPlacemarkFour)
+                .add(myPlacemarkFive);
+            myMap.geoObjects
+                .add(myIcon);
+
+            var el = $('.contacts__on-map');
+
+            el.click(function () {
+                var coords = $(this).val();
+                coords = coords.split(',');
+                myMap.setCenter(coords, 17, {
+                    checkZoomRange: true
+                });
             });
         }
     </script>
