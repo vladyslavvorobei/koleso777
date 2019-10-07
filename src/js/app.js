@@ -306,18 +306,22 @@ $(function() {
     const $cardPlus = $('.product-card__plus');
     const $parent = $('.product-card__num-block');
     const $input = $('.product-card__quantity');
-    let counter = 1;
+    let counter;
 
-    $cardMunis.click(function () {
+    $cardMunis.click(function (e) {
+      e.preventDefault();
       const $thisInput = $(this).closest($parent).find($input);
+      counter = +$thisInput.val();
       if (counter > 1) {
         counter -= 1;
       }
       $thisInput.val(counter);
     });
 
-    $cardPlus.click(function () {
+    $cardPlus.click(function (e) {
+      e.preventDefault();
       const $thisInput = $(this).closest($parent).find($input);
+      counter = +$thisInput.val();
       counter += 1;
       $thisInput.val(counter);
     });

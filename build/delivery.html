@@ -207,8 +207,209 @@
             </ul>
             <p> Кроме этого, информация о весе шин может быть полезна тем, кто хочет снизить вес автомобиля в целом (при выезде на бездорожье), либо "помешан" на расходе топлива. </p>
             <h3> Калькулятор расчёта стоимости заявки. </h3>
-            <div class="delivery__form">
-            </div>
+            <form class="delivery__form">
+              <div class="delivery__col">
+                <div class="delivery__data data-form">
+                  <div class="delivery__title"> Данные о грузе </div>
+                  <div class="data-form__block">
+                    <div class="data-form__tab-nav">
+                      <button class="active"> Указать общий вес/объем </button>
+                      <button class="data-form__info" title="Указать размер товаров с учетом габаритов"> Указать с габаритами </button>
+                    </div>
+                    <div class="data-form__tab-content">
+                      <div class="data-form__row">
+                        <div class="data-form__label"> Общий вес, кг <input type="text" placeholder="1">
+                        </div>
+                        <div class="data-form__label"> Общий объем, м<sup>3</sup>
+                          <input type="text" placeholder="0.01">
+                        </div>
+                        <div class="data-form__label"> Макс. габарит, м <input type="text" placeholder="0.1">
+                        </div>
+                        <div class="data-form__label"> Кол-во мест <div class="product-card__num-block">
+                            <button class="product-card__minus">-</button>
+                            <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Кол-во" class="product-card__quantity">
+                            <button class="product-card__plus">+</button>
+                          </div>
+                        </div>
+                        <a href="#" class="data-form__calculate"> Рассчитать объем по грабаритам </a>
+                      </div>
+                      <div class="data-form__row">
+                        <div class="data-form__label data-form__label--big "> Обявленая стоимость, руб <span class="data-form__info" title="Цена в рублях за товар">
+                            <input type="text" placeholder="1">
+                          </span>
+                        </div>
+                        <div class="data-form__label data-form__label--checkbox">
+                          <span>Особые характеристики</span>
+                          <input type="checkbox" value="Жидкий" id="liquid">
+                          <label for="liquid"> Жидкий </label>
+                          <input type="checkbox" value="Хрупкий" id="fragile">
+                          <label for="fragile"> Хрупкий </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery__direction direction">
+                  <div class="delivery__title"> Направление </div>
+                  <div class="direction__block">
+                    <div class="direction__card">
+                      <div class="direction__item"> А </div>
+                      <div class="direction__container">
+                        <div class="direction__row direction__row--map">
+                          <input type="text" placeholder="Россия, Новосибирск">
+                          <button class="direction__on-map"> На карте </button>
+                        </div>
+                        <div class="direction__row">
+                          <div class="direction__radio">
+                            <input type="radio" name="directionRadio" id="byAddress" checked>
+                            <label for="byAddress" class="direction__label direction__address"> Забрать по адресу <span>(+ 210 руб.)</span>
+                            </label>
+                            <input type="radio" name="directionRadio" id="toDepartment">
+                            <label for="toDepartment" class="direction__label direction__department"> Сдать груз в отделение <a href="#">&asymp; 4.3 км</a> <strong>(без доплаты)</strong>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="direction__row direction__row--branch">
+                          <div class="direction__branch">
+                            <strong>"Новосибирск фронт-офис"</strong>, Новосибирская обл., г. Новосибирск, ул. Планетная, д.30, корп. 2а </div>
+                          <a href="#" class="direction__branch-change"> Изменить отделение </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="direction__card">
+                      <div class="direction__item"> Б </div>
+                      <div class="direction__container">
+                        <div class="direction__row direction__row--map">
+                          <input type="text" placeholder="Россия, Москва">
+                          <button class="direction__on-map"> На карте </button>
+                        </div>
+                        <div class="direction__row">
+                          <div class="direction__radio">
+                            <input type="radio" name="directionRadio" id="byAddress" checked>
+                            <label for="byAddress" class="direction__label direction__address"> Забрать по адресу <span>(+ 210 руб.)</span>
+                            </label>
+                            <input type="radio" name="directionRadio" id="toDepartment">
+                            <label for="toDepartment" class="direction__label direction__department"> Сдать груз в отделение <a href="#">&asymp; 4.3 км</a> <strong>(без доплаты)</strong>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="direction__row direction__row--branch">
+                          <div class="direction__branch">
+                            <strong>"Новосибирск фронт-офис"</strong>, Новосибирская обл., г. Новосибирск, ул. Планетная, д.30, корп. 2а </div>
+                          <a href="#" class="direction__branch-change"> Изменить отделение </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="direction__card">
+                      <div class="direction__item"> В </div>
+                      <div class="direction__container">
+                        <div class="direction__row direction__row--map">
+                          <input type="text" placeholder="Россия, Москва">
+                          <button class="direction__on-map"> На карте </button>
+                        </div>
+                        <div class="direction__row">
+                          <div class="direction__radio">
+                            <input type="radio" name="directionRadio" id="byAddress" checked>
+                            <label for="byAddress" class="direction__label direction__address"> Забрать по адресу <span>(+ 210 руб.)</span>
+                            </label>
+                            <input type="radio" name="directionRadio" id="toDepartment">
+                            <label for="toDepartment" class="direction__label direction__department"> Сдать груз в отделение <a href="#">&asymp; 4.3 км</a> <strong>(без доплаты)</strong>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="direction__row direction__row--branch">
+                          <div class="direction__branch">
+                            <strong>"Новосибирск фронт-офис"</strong>, Новосибирская обл., г. Новосибирск, ул. Планетная, д.30, корп. 2а </div>
+                          <a href="#" class="direction__branch-change"> Изменить отделение </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery__datetime">
+                  <h4> Когда планируете сдать груз? </h4>
+                  <input type="datetime-local">
+                </div>
+              </div>
+              <div class="delivery__col">
+                <div class="delivery__calculation calculation">
+                  <div class="calculation__items">
+                    <span> Москва </span>
+                    <span> Новосибирск </span>
+                  </div>
+                  <div class="calculation__cargo"> Груз: <span>0,01м<sup>3</sup></span>
+                    <span>1кг</span>
+                    <span>1 место</span>
+                  </div>
+                  <div class="calculation__price">
+                    <div>
+                      <span> Автоперевозка </span>
+                      <span> 450руб. </span>
+                    </div>
+                    <div>
+                      <span> Пломбирование груза </span>
+                      <span> 30руб. </span>
+                    </div>
+                    <div>
+                      <span> Страховка </span>
+                      <span> 20руб. </span>
+                    </div>
+                    <div class="calculation__sum">
+                      <span> Сумма </span>
+                      <span> 500руб. </span>
+                    </div>
+                  </div>
+                  <div class="calculation__datetime datetime-calc">
+                    <div class="datetime-calc__time"> 6 дней </div>
+                    <div class="datetime-calc__date">
+                      <h5>04 июля</h5>
+                      <p> ориентировочный срок </p>
+                    </div>
+                  </div>
+                  <div class="calculation__faster">
+                    <h4> Хотите быстрее? </h4>
+                    <div class="calculation__radio">
+                      <label class="calculation__label">
+                        <span class="calculation__label-standard"> Стандарт </span>
+                        <span class="calculation__input">
+                          <strong>без доплаты</strong>
+                          <input type="radio" name="faster" class="calculation__radio-btn" checked>
+                          <span class="calculation__custom-input"></span>
+                        </span>
+                      </label>
+                      <label class="calculation__label">
+                        <span class="calculation__label-air"> Авиа <span> Быстрее на <strong>3 дня</strong>
+                          </span>
+                        </span>
+                        <span class="calculation__input">
+                          <span> +2,280 руб. </span>
+                          <input type="radio" name="faster" class="calculation__radio-btn">
+                          <span class="calculation__custom-input"> </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="calculation__button">
+                    <button class="button button--send"> Оформить заказ </button>
+                  </div>
+                </div>
+                <div class="delivery__print">
+                  <a href="#">
+                    <svg class="icon icon-printer">
+                      <use xlink:href="img/sprite.svg#icon-printer"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="delivery__add-buyer">
+                  <p> Если у вас несколько грузов для разных получателей, воспользуйтесь удобной формой сетевой заявки. </p>
+                  <button class="button"> Еще один получатель </button>
+                </div>
+                <div class="delivery__links">
+                  <a href="#"> Отправить отзыв о новой заявке </a>
+                  <a href="#"> Перейти к старой версии </a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -58,4 +58,636 @@
 			margin-bottom: 0
 			+r(767)
 				margin-bottom: 15px
+	&__form
+		border-radius: 4px
+		background-color: $white
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+		padding: 60px 70px
+		display: grid
+		grid-template-columns: 5fr 2fr
+		grid-gap: 30px
+		+r(1199)
+			display: flex
+			flex-direction: column
+		+r(991)
+			padding: 40px 30px
+		+r(767)
+			padding: 30px 20px
+	&__col
+		&:first-of-type
+			margin-top: 30px
+	&__data
+		display: flex
+		border-bottom: 1px solid $gallery
+		padding-bottom: 40px
+		+r(991)
+			flex-direction: column
+
+	&__direction
+		display: flex
+		margin-top: 40px
+		+r(991)
+			flex-direction: column
+	&__title
+		width: 150px
+		margin-right: 20px
+		flex-shrink: 0
+		text-align: left
+		font-size: 18px
+		font-family: $titleFont
+		font-weight: 700
+		color: $mineShaft
+		+r(991)
+			margin-right: 0
+			margin-bottom: 15px
+			width: 100%
+			text-align: center
+	&__datetime
+		margin-left: 170px
+		+r(991)
+			margin-left: 0
+			text-align: center
+		h4
+			font-size: 16px
+			color: #3f3f3f
+			font-weight: 700
+			line-height: 1em
+			margin: 0 0 5px
+		input
+			border-radius: 6px
+			background-color: #f5f5f5
+			border: 0
+			line-height: 1em
+			font-size: 16px
+			outline: 0
+			padding: 11.5px 14px
+			display: block
+			-webkit-box-sizing: border-box
+			box-sizing: border-box
+			letter-spacing: -.02em
+			resize: none
+			font-family: $globalDefaultFont
+			font-weight: 700
+			color: #a1a1a1
+			margin-top: 7px
+			+r(991)
+				width: 100%
+	&__calculation
+		border: 1px solid $gallery
+		border-radius: 4px
+		background-color: $white
+	&__print
+		text-align: right
+		margin-bottom: 25px
+		a
+			display: block
+			line-height: 1em
+			&:hover
+				.icon
+					fill: $redInForm
+		.icon
+			font-size: 18px
+			fill: $elm
+	&__add-buyer
+		padding: 20px 15px 30px
+		text-align: center
+		border-radius: 4px
+		background-color: $white
+		border: 1px solid $gallery
+		margin-bottom: 25px
+		.button
+			margin: 0 auto
+			&:last-of-type
+				margin: 0 auto
+			+r(575)
+				max-width: none
+	&__links
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		a
+			display: inline-block
+			color: $redInForm
+			padding: 0
+			border-bottom: 1px solid $redInForm
+			transition: all .3s ease
+			line-height: 1em
+			margin-bottom: 10px
+			&:hover
+				color: $elm
+				border-bottom: 1px solid transparent
+
+.data-form
+	&__tab-nav
+		display: flex
+		margin-bottom: 15px
+		margin-top: 3px
+		+r(991)
+			flex-wrap: wrap
+		button
+			display: block
+			margin-right: 20px
+			background-color: transparent
+			font-size: 18px
+			border: none
+			padding: 0
+			color: $silverChalice
+			border-bottom: 3px solid transparent
+			transition: all .3s ease
+			line-height: 1.2em
+			+r(991)
+				margin-bottom: 10px
+			&:last-of-type
+				margin-right: 0
+				+r(991)
+					margin-bottom: 0
+			&.active
+				color: $mineShaft
+				border-bottom: 3px solid $elm
+				transition: all .3s ease
+			&:hover
+				color: $mineShaft
+	&__info
+		padding-right: 20px!important
+		position: relative
+		display: block
+		&::before
+			content: ''
+			width: 14px
+			height: 14px
+			position: absolute
+			right: 0
+			top: calc( 50% - 7px)
+			background: url('../img/information-button.svg') center no-repeat
+			background-size: contain
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 25px
+		align-items: flex-start
+		&:last-of-type
+			margin-bottom: 0
+	&__calculate
+		display: block
+		width: 100%
+		margin-top: 15px
+		font-size: 16px
+		color: $silverChalice
+		transition: all .3s ease
+		&:hover
+			color: $elm
+	&__label
+		width: 130px
+		margin-right: 20px
+		font-size: 16px
+		color: $mineShaft
+		font-weight: 700
+		line-height: 1em
+		+r(575)
+			margin-right: 10px
+		&:last-of-type
+			margin-right: 0
+		.product-card__num-block
+			margin-right: 0
+			width: 130px
+			margin-top: 7px
+		input
+			border-radius: 6px
+			background-color: $wildSand
+			border: none
+			line-height: 1em
+			font-size: 16px
+			outline: none
+			padding: 11.5px 14px
+			width: 100%
+			display: block
+			box-sizing: border-box
+			+ls($globalLetterSpacing)
+			resize: none
+			text-align: center
+			font-family: $globalDefaultFont
+			font-weight: 700
+			color: $silverChalice
+			margin-top: 7px
+			&::placeholder
+				color: $silverChalice
+			&.product-card__quantity
+				width: 70px
+				margin-top: 0
+				border-radius: 0
+				margin-bottom: 0
+			+r(991)
+				margin-bottom: 10px
+		sup
+			position: relative
+			line-height: .1em
+		&--big
+			width: 220px
+			margin-right: 50px
+			input
+				text-align: left
+		&--checkbox
+			width: 200px
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: flex-start
+			position: relative
+			span
+				width: 100%
+				display: block
+				margin-bottom: 15px
+			label
+				position: relative
+				padding-left: 25px
+				font-weight: 400
+				line-height: 1.15em
+				&::before
+					content: ''
+					width: 18px
+					height: 18px
+					border: 1px solid $gallery
+					position: absolute
+					left: 0
+					top: 0
+					box-sizing: border-box
+					border-radius: 2px
+				&::after
+					content: ''
+					width: 4px
+					height: 7px
+					border-bottom: 2px solid $elm
+					border-right: 2px solid $elm
+					position: absolute
+					left: 6px
+					top: 3px
+					transform: rotate(45deg)
+					opacity: 0
+					transition: all .3s ease
+			input
+				position: absolute
+				width: 18px
+				height: 18px
+				left: 0
+				margin: 0
+				opacity: 0
+				&:checked + label
+					&::after
+						opacity: 1
+
+.direction
+	&__card
+		display: flex
+		padding: 15px
+		background-color: $wildSand
+		border-radius: 4px
+		margin-bottom: 20px
+		+r(767)
+			flex-direction: column
+
+		& + .direction__card
+			position: relative
+			&::after
+				content: ''
+				width: 35px
+				height: 35px
+				background: url('../img/reverse.svg') center no-repeat $white
+				background-size: 13px 13px
+				border-radius: 50%
+				position: absolute
+				top: -28px
+				right: 18px
+				cursor: pointer
+
+	&__item
+		flex-shrink: 0
+		margin-right: 12px
+		width: 36px
+		height: 36px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $redInForm
+		color: $white
+		border-radius: 50%
+		font-weight: 700
+		font-size: 18px
+		text-transform: uppercase
+		+r(767)
+			margin: 0 auto 20px
+	&__row
+		&--map
+			display: flex
+			align-items: center
+			input
+				width: 80%
+				margin-right: 10px
+				border-radius: 4px
+				background-color: $white
+				border: none
+				line-height: 1em
+				font-size: 16px
+				outline: none
+				padding: 8.5px 14px
+				display: block
+				box-sizing: border-box
+				+ls($globalLetterSpacing)
+				resize: none
+				font-family: $globalDefaultFont
+				font-weight: 700
+				color: $silverChalice
+		&--branch
+			padding-top: 15px
+	&__on-map
+		margin-left: 17px
+		border: none
+		border-bottom: 1px dashed $redInForm
+		padding: 0
+		background-color: transparent
+		color: $redInForm
+		position: relative
+		transition: all .3s ease
+		flex-shrink: 0
+		&::before
+			content: ''
+			position: absolute
+			left: -17px
+			background: url('../img/maps-and-flags.svg') center no-repeat
+			background-size: contain
+			width: 11px
+			height: 15px
+		&:hover
+			border-bottom: 1px dashed transparent
+	&__radio
+		display: flex
+		flex-direction: column
+		position: relative
+		border-bottom: 1px solid $white
+		padding: 15px 0 10px
+		input
+			position: absolute
+			opacity: 0
+			&:checked + .direction__label
+				&::after
+					opacity: 1
+	&__label
+		padding-left: 22px
+		position: relative
+		line-height: 1.15em
+		margin-bottom: 15px
+		color: $mineShaft
+		&:last-of-type
+			margin-bottom: 0
+		&::before
+			content: ''
+			width: 18px
+			height: 18px
+			position: absolute
+			left: 0
+			top: 0
+			border: 2px solid $silverChalice
+			border-radius: 50%
+			box-sizing: border-box
+		&::after
+			content: ''
+			width: 8px
+			height: 8px
+			background-color: $elm
+			position: absolute
+			left: 5px
+			top: 5px
+			opacity: 0
+			border-radius: 50%
+			transition: all .3s ease
+	&__address
+		span
+			color: $silverChalice
+	&__department
+		a
+			color: $mineShaft
+			border-bottom: 1px dashed $mineShaft
+			transition: all .3s ease
+			&:hover
+				color: $redInForm
+				border-bottom: 1px dashed $redInForm
+		strong
+			color: $elm
+	&__branch
+		line-height: 1em
+		margin-bottom:  10px
+		font-family: $mineShaft
+		&-change
+			display: inline-block
+			color: $redInForm
+			border-bottom: 1px dashed $redInForm
+			padding: 0
+			line-height: 1em
+			transition: all .3s ease
+			&:hover
+				border-bottom: 1px dashed transparent
+				color: $elm
+
+.calculation
+	margin-bottom: 10px
+	&__items
+		padding: 18px 15px 0
+		margin-bottom: 10px
+		span
+			display: block
+			padding-left: 25px
+			position: relative
+			line-height: 1.1em
+			font-weight: 700
+			font-size: 16px
+			margin-bottom: 10px
+			&::before
+				content: ''
+				width: 17px
+				height: 17px
+				border: 1px solid $mineShaft
+				border-radius: 50%
+				position: absolute
+				background-color: $white
+				left: 0
+				z-index: 2
+			+ span
+				&::after
+					content: ''
+					width: 1px
+					height: 100%
+					top: -100%
+					left: 9px
+					position: absolute
+					background-color: $mineShaft
+					z-index: 1
+
+	&__cargo
+		font-family: $globalDefaultFont
+		font-weight: 400
+		font-size: 16px
+		padding: 0 15px
+		margin-bottom: 22px
+	&__price
+		padding: 0 15px
+		div
+			display: flex
+			justify-content: space-between
+			position: relative
+			margin-bottom: 8px
+			color: $mineShaft
+			&::before
+				content: ''
+				width: 100%
+				height: 1px
+				border-bottom: 1px dashed $mineShaft
+				position: absolute
+				bottom: 5px
+			span
+				display: block
+				background-color: $white
+				z-index: 1
+				&:first-of-type
+					padding-right: 5px
+				&:last-of-type
+					padding-left: 5px
+			&.calculation__sum
+				margin-bottom: 0
+				&::before
+					content: none
+	&__sum
+		padding: 15px 0
+		border-top: 1px solid $mineShaft
+		span
+			font-weight: 700
+	&__faster
+		h4
+			margin: 0
+			padding: 12px 15px
+			font-size: 16px
+	&__radio-btn
+		position: absolute
+		opacity: 0
+		&:checked + .calculation__custom-input
+			&::after
+				opacity: 1
+	&__label
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 15px
+		border-top: 1px solid $gallery
+		border-bottom: 1px solid $gallery
+		&:first-of-type
+			background-color: $wildSand
+			border-bottom: none
+		&-standard
+			padding-left: 30px
+			position: relative
+			&::before
+				content: ''
+				width: 22px
+				height: 17px
+				background: url('../img/truck.svg') center no-repeat
+				background-size: contain
+				position: absolute
+				left: 0
+				top: calc( 50% - 8.5px)
+		&-air
+			padding-left: 30px
+			position: relative
+			display: flex
+			flex-direction: column
+			line-height: 1em
+			span
+				line-height: 1em
+				font-size: 13px
+				strong
+					color: $redInForm
+			&::before
+				content: ''
+				width: 22px
+				height: 17px
+				background: url('../img/airplane.svg') center no-repeat
+				background-size: contain
+				position: absolute
+				left: 0
+				top: calc( 50% - 8.5px)
+	&__input
+		strong
+			color: $elm
+		span
+			color: $silverChalice
+	&__custom-input
+		padding-right: 22px
+		position: relative
+		line-height: 1.15em
+		margin-bottom: 15px
+		color: $mineShaft
+		&:last-of-type
+			margin-bottom: 0
+		&::before
+			content: ''
+			width: 18px
+			height: 18px
+			position: absolute
+			right: 0
+			top: 0
+			border: 2px solid $silverChalice
+			border-radius: 50%
+			box-sizing: border-box
+		&::after
+			content: ''
+			width: 8px
+			height: 8px
+			background-color: $elm
+			position: absolute
+			right: 5px
+			top: 5px
+			opacity: 0
+			border-radius: 50%
+			transition: all .3s ease
+	&__button
+		padding: 15px
+		display: flex
+		align-items: center
+		justify-content: center
+		.button
+			margin: 0 auto
+			&:last-of-type
+				margin: 0 auto
+			+r(575)
+				max-width: none
+.datetime-calc
+	display: flex
+	align-items: center
+	padding: 15px
+	justify-content: space-between
+	background-color: $gallery
+	flex-wrap: wrap
+	&__time
+		flex-shrink: 0
+	&__date
+		text-align: right
+		padding-right: 25px
+		position: relative
+		&::after
+			content: ''
+			width: 8px
+			height: 8px
+			position: absolute
+			right: 0
+			top: calc( 50% - 4px )
+			border-bottom: 2px solid $mineShaft
+			border-right: 2px solid $mineShaft
+			transform: rotate(45deg)
+
+		h5, p
+			margin: 0
+			line-height: 1em
+		h5
+			font-size: 16px
+		p
+			font-size: 13px
 
