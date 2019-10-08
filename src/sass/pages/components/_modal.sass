@@ -1,0 +1,73 @@
+.modal
+	margin: 5% auto 0
+	width: 100%
+	max-width: 620px
+	outline: none
+	border-radius: 4px
+	background-color: $white
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1)
+	padding: 55px 60px
+	box-sizing: border-box
+	+r(575)
+		padding: 40px 15px 30px
+	&__row
+		&--elems
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 20px
+			+r(767)
+				grid-template-columns: 1fr
+	&_close
+		position: absolute
+		width: 15px
+		height: 15px
+		right: 30px
+		top: 30px
+		cursor: pointer
+		background-color: transparent
+		border: none
+		&::before, &::after
+			content: ''
+			width: 19px
+			height: 1.5px
+			background-color: $mineShaft
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) rotate(45deg)
+			transition: all .3s ease
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&:hover
+			&::before, &::after
+				background-color: $redInForm
+	label
+		&.error
+			position: absolute
+			top: -14px
+			width: 100%
+			padding: 0 5px
+			color: $white
+			background: $redInForm
+			box-sizing: border-box
+			line-height: 1.2em
+	h4
+		font-size: 13px
+		color: $silverChalice
+		margin: 0 0 10px
+		line-height:  1.2em
+	h3
+		font-family: $titleFont
+		font-size: 19px
+		color: $mineShaft
+		margin: 0 0 25px
+#rules
+	max-width: 800px
+	h4
+		font-size: 20px
+#thanks
+	max-width: 400px
+	h3, h4
+		text-align: center
+	h3
+		margin-bottom: 0

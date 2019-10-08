@@ -1,0 +1,26 @@
+.button-up
+	position: fixed
+	display: block
+	right: 40px
+	bottom: 90px
+	width: 36px
+	height: 36px
+	border-radius: 4px
+	background-color: $elm
+	border: 1px solid $white
+	z-index: 1000
+	+r(575)
+		right: 17px
+		bottom: 25px
+	&::before
+		content: ''
+		width: 6px
+		height: 6px
+		position: absolute
+		left: 50%
+		top: 55%
+		transform: translate(-50%, -50%) rotate(45deg)
+		border-top: 2px solid $white
+		border-left: 2px solid $white
+	&--hidden
+		display: none
